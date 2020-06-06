@@ -11,7 +11,13 @@
 **ABSTRACT**
 
 This repository hosts different contents, tools and assets of the SalesTim API SDK:
-- Source Code Generator: Scripts based on [Autorest](https://github.com/Azure/autorest) that generates source code for various languages and platforms.
+- Source Code Generators
+
+: Scripts based on [Autorest](https://github.com/Azure/autorest) that generates source code for various languages and platforms.
+
+https://github.com/OpenAPITools/openapi-generator
+https://www.npmjs.com/package/@openapitools/openapi-generator-cli
+
 - Build Scripts: Scripts that generates binaries and/or packages for each language and platform
 - Pre-Built Packages: Ready to use packages for each platform
 
@@ -39,17 +45,14 @@ To learn more about the SalesTim API, see our [API Documentation](https://develo
 
 As of today, here is the current status of the support for each language / platform:
 
-| Language / Platform | Support | Pre-built Package |
-|:-|:-|:-:|
-| PowerShell | 💁‍♀️ Supported | [📤 DOWNLOAD]() |
-| Node.js | 💁‍♀️ Supported | [📤 DOWNLOAD]() |
-| TypeScript | 💁‍♀️ Supported | [📤 DOWNLOAD]() |
-| CSharp | 🧪 Experimental | None. See [Build from sources]() |
-| Python | 🧪 Experimental | |
-| Java | 🧪 Experimental | |
-| Ruby | 🧪 Experimental | |
-| Go | 🧪 Experimental | |
-
+| Name | Code | Type | Support |
+|:-|:-|:-|:-|:-:|
+| PowerShell | powershell | Client | 💁‍♀️ Supported |
+| Node & JavaScript | javascript | Client | 💁‍♀️ Supported |
+| Salesforce Apex | apex | Client | 🧪 Experimental |
+| C# > .NET Core | csharp-netcore | Client | 🧪 Experimental |
+| Asp.Net Core | aspnetcore | Server | 🧪 Experimental |
+| Node + Express | nodejs-express-server | Server | 🧪 Experimental |
 
 ## B. CONTRIBUTE
 

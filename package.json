@@ -4,20 +4,15 @@
   "description": "SalesTim API SDK",
   "scripts": {
     "init": "gulp init",
-    "gen-powershell": "autorest --powershell autorest-config-powershell.yaml",
+    "gen-powershell": "npm run init && autorest --powershell autorest-config-powershell.yaml",
     "build-powershell": "pwsh ./src/powershell/build-module.ps1",
     "pack-powershell": "pwsh ./src/powershell/pack-module.ps1",
-
-    "gen-nodejs": "autorest --input-file=salestim-api.yaml --nodejs --output-folder=src/nodejs --namespace=SalesTim --v3",
-    "gen-typescript": "autorest --input-file=salestim-api.yaml --typescript --output-folder=src/typescript --namespace=SalesTim --v3",
-    "gen-csharp": "autorest --input-file=salestim-api.yaml --csharp --output-folder=src/csharp --namespace=SalesTim --v3",
-    "gen-python": "autorest --input-file=salestim-api.yaml --python --output-folder=src/python --namespace=SalesTim --v3",
-    "gen-java": "autorest --input-file=salestim-api.yaml --java --output-folder=src/java --namespace=SalesTim --v3",
-    "gen-ruby": "autorest --input-file=salestim-api.yaml --ruby --output-folder=src/ruby --namespace=SalesTim",
-    "gen-go": "autorest --input-file=salestim-api.yaml --go --output-folder=src/go --namespace=SalesTim --v3",
-
-    "gen-supported": "gulp init && npm run gen-powershell && npm run gen-nodejs && npm run gen-typescript",
-    "gen-experimental": "gulp init && npm run gen-csharp && npm run gen-python && npm run gen-java && npm run gen-ruby && npm run gen-go"
+    "gen-javascript": "npm run init && ./node_modules/@openapitools/openapi-generator-cli/bin/openapi-generator generate -i ./salestim-api.yaml -g javascript -o src/javascript",
+    "gen-apex": "npm run init && ./node_modules/@openapitools/openapi-generator-cli/bin/openapi-generator generate -i ./salestim-api.yaml -g apex -o src/apex",
+    "gen-csharp-netcore": "npm run init && ./node_modules/@openapitools/openapi-generator-cli/bin/openapi-generator generate -i ./salestim-api.yaml -g csharp-netcore -o src/csharp-netcore",
+    "gen-aspnetcore": "npm run init && ./node_modules/@openapitools/openapi-generator-cli/bin/openapi-generator generate -i ./salestim-api.yaml -g powershell -o src/powershell2",
+    "build-aspnetcore": "cd ./src/aspnetcore/ && sh ./build.sh",
+    "gen-nodejs-express-server": "npm run init && ./node_modules/@openapitools/openapi-generator-cli/bin/openapi-generator generate -i ./salestim-api.yaml -g nodejs-express-server -o src/nodejs-express-server"
   },
   "author": "Guillaume Meyer <gmeyer@salestim.com> (https://www.salestim.com)",
   "license": "MIT",
