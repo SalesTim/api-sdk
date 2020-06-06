@@ -1,0 +1,34 @@
+{
+  "name": "api-sdk",
+  "version": "0.0.1",
+  "description": "SalesTim API SDK",
+  "scripts": {
+    "init": "gulp init",
+    "gen-powershell": "autorest --input-file=salestim-api.yaml --powershell --output-folder=src/powershell --namespace=SalesTim",
+    "gen-nodejs": "autorest --input-file=salestim-api.yaml --nodejs --output-folder=src/nodejs --namespace=SalesTim --v3",
+    "gen-typescript": "autorest --input-file=salestim-api.yaml --typescript --output-folder=src/typescript --namespace=SalesTim --v3",
+    "gen-csharp": "autorest --input-file=salestim-api.yaml --csharp --output-folder=src/csharp --namespace=SalesTim --v3",
+    "gen-python": "autorest --input-file=salestim-api.yaml --python --output-folder=src/python --namespace=SalesTim --v3",
+    "gen-java": "autorest --input-file=salestim-api.yaml --java --output-folder=src/java --namespace=SalesTim --v3",
+    "gen-ruby": "autorest --input-file=salestim-api.yaml --ruby --output-folder=src/ruby --namespace=SalesTim",
+    "gen-go": "autorest --input-file=salestim-api.yaml --go --output-folder=src/go --namespace=SalesTim --v3",
+    "gen-supported": "gulp init && npm run gen-powershell && npm run gen-nodejs && npm run gen-typescript",
+    "gen-experimental": "gulp init && npm run gen-csharp && npm run gen-python && npm run gen-java && npm run gen-ruby && npm run gen-go"
+  },
+  "author": "Guillaume Meyer <gmeyer@salestim.com> (https://www.salestim.com)",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SalesTim/api-sdk.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^1.0.13-4.3.1",
+    "autorest": "^3.0.6187",
+    "figlet": "^1.4.0",
+    "gulp": "^4.0.2",
+    "request": "^2.88.2",
+    "standard": "^14.3.4"
+  }
+}
