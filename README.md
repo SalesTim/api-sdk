@@ -79,6 +79,13 @@ npm run generate-experimental
 **Note for Contributors**   
 Please be aware that the source code generation scripts relies on [AutoRest](https://github.com/Azure/autorest), that itself runs on NodeJSn which should make it quite portable. But some generators use the .NET Core 2runtime, which is a more limiting factor.
 For reference, see [Install PowerShell Core on Linux]()
+PowerShell Core 6.1+
+download from the link above or once you have Node installed
+npm install -g pwsh
+Dotnet Core 2.1+
+download from the link above or once you have Node installed
+npm install -g dotnet-sdk-2.1
+
 
 ## X. APPENDICES
 

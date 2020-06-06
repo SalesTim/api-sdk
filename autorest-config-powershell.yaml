@@ -1,0 +1,5 @@
+--- 
+# it's the same options as command line options, just drop the double-dash!
+input-file: salestim-api.yaml
+namespace: salestim.sdk
+output-folder: ./src/powershell
