@@ -13,7 +13,7 @@ Contact: support@salestim.com
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8C5D49EB-D896-4BA5-8E4F-C70AA1C745BE}</ProjectGuid>
+    <ProjectGuid>{9D8E993D-198A-4811-B817-481E447E2C08}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Org.OpenAPITools</RootNamespace>

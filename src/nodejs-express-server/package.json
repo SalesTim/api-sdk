@@ -1,5 +1,5 @@
 {
-  "name": "salestim-api",
+  "name":  "salestim-api",
   "version": "1.0.0",
   "description": "The Microsoft Teams Governance API ",
   "main": "index.js",

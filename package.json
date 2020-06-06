@@ -10,9 +10,12 @@
     "gen-javascript": "npm run init && ./node_modules/@openapitools/openapi-generator-cli/bin/openapi-generator generate -i ./salestim-api.yaml -g javascript -o src/javascript",
     "gen-apex": "npm run init && ./node_modules/@openapitools/openapi-generator-cli/bin/openapi-generator generate -i ./salestim-api.yaml -g apex -o src/apex",
     "gen-csharp-netcore": "npm run init && ./node_modules/@openapitools/openapi-generator-cli/bin/openapi-generator generate -i ./salestim-api.yaml -g csharp-netcore -o src/csharp-netcore",
-    "gen-aspnetcore": "npm run init && ./node_modules/@openapitools/openapi-generator-cli/bin/openapi-generator generate -i ./salestim-api.yaml -g powershell -o src/powershell2",
+    "gen-aspnetcore": "npm run init && ./node_modules/@openapitools/openapi-generator-cli/bin/openapi-generator generate -i ./salestim-api.yaml -g aspnetcore -o src/aspnetcore",
     "build-aspnetcore": "cd ./src/aspnetcore/ && sh ./build.sh",
-    "gen-nodejs-express-server": "npm run init && ./node_modules/@openapitools/openapi-generator-cli/bin/openapi-generator generate -i ./salestim-api.yaml -g nodejs-express-server -o src/nodejs-express-server"
+    "gen-nodejs-express-server": "npm run init && ./node_modules/@openapitools/openapi-generator-cli/bin/openapi-generator generate -i ./salestim-api.yaml -g nodejs-express-server -o src/nodejs-express-server",
+    "gen-supported":"npm run gen-powershell && npm run gen-javascript",
+    "gen-experimental":"npm run gen-apex && npm run gen-csharp-netcore && npm run gen-aspnetcore && npm run gen-nodejs-express-server",
+    "gen-all":"npm run gen-supported && npm run gen-experimental"
   },
   "author": "Guillaume Meyer <gmeyer@salestim.com> (https://www.salestim.com)",
   "license": "MIT",

@@ -10,19 +10,16 @@
 
 **ABSTRACT**
 
-This repository hosts different contents, tools and assets of the SalesTim API SDK:
-- Source Code Generators
+The SalesTim API SDK provides easy to use client and server libraries for accessing The SalesTim RESTful API.  
+To learn more about the SalesTim API, see our [API Documentation](https://developers.salestim.com/api)
 
-: Scripts based on [Autorest](https://github.com/Azure/autorest) that generates source code for various languages and platforms.
+This repository contains the SalesTim API SDK for various clients and servers, each one of them located in their own folder in the `src` directory.
 
-https://github.com/OpenAPITools/openapi-generator
-https://www.npmjs.com/package/@openapitools/openapi-generator-cli
+The source code generation process () relies on two code generators:
+- [Autorest](https://github.com/Azure/autorest) the the `powershell` client.
+- [OpenAPI Generator CLI](https://www.npmjs.com/package/@openapitools/openapi-generator-cli) for everything else.
 
-- Build Scripts: Scripts that generates binaries and/or packages for each language and platform
-- Pre-Built Packages: Ready to use packages for each platform
-
-The SalesTim API SDK provides easy to use client libraries for accessing The SalesTim RESTful web services.  
-To learn more about the SalesTim API, see our [API Documentation](https://developers.Salestim.com/api)
+Sometimes, the generated source code may include some additional build / packaging scripts. Please refer to each SDK `README` for reference.
 
 ---
 
@@ -46,7 +43,7 @@ To learn more about the SalesTim API, see our [API Documentation](https://develo
 As of today, here is the current status of the support for each language / platform:
 
 | Name | Code | Type | Support |
-|:-|:-|:-|:-|:-:|
+|:-----|:-----|:-----|:--------|
 | PowerShell | powershell | Client | 💁‍♀️ Supported |
 | Node & JavaScript | javascript | Client | 💁‍♀️ Supported |
 | Salesforce Apex | apex | Client | 🧪 Experimental |
@@ -70,13 +67,13 @@ npm install
 To generate SDK for supported languages only, use:
 ```shell
 # Generate SDK for the supported languages only
-npm run generate-supported
+npm run gen-supported
 ```
 
 To generate SDK for **experimental** languages, use:
 ```shell
 # Generate SDK for EXPERIMENTAL languages
-npm run generate-experimental
+npm run gen-experimental
 ```
 
 **Note for Contributors**   
