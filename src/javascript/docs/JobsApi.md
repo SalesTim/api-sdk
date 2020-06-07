@@ -22,16 +22,16 @@ Create a new provisioning job by sending a ProvisioningRequest
 ```javascript
 import SalesTimApi from 'sales_tim_api';
 let defaultClient = SalesTimApi.ApiClient.instance;
-// Configure API key authorization: pluginId
-let pluginId = defaultClient.authentications['pluginId'];
-pluginId.apiKey = 'YOUR API KEY';
+// Configure API key authorization: appId
+let appId = defaultClient.authentications['appId'];
+appId.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//pluginId.apiKeyPrefix = 'Token';
-// Configure API key authorization: pluginSecret
-let pluginSecret = defaultClient.authentications['pluginSecret'];
-pluginSecret.apiKey = 'YOUR API KEY';
+//appId.apiKeyPrefix = 'Token';
+// Configure API key authorization: appSecret
+let appSecret = defaultClient.authentications['appSecret'];
+appSecret.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//pluginSecret.apiKeyPrefix = 'Token';
+//appSecret.apiKeyPrefix = 'Token';
 
 let apiInstance = new SalesTimApi.JobsApi();
 let provisioningRequest = new SalesTimApi.ProvisioningRequest(); // ProvisioningRequest | A ProvisioningRequest object describing the job to execute
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[pluginId](../README.md#pluginId), [pluginSecret](../README.md#pluginSecret)
+[appId](../README.md#appId), [appSecret](../README.md#appSecret)
 
 ### HTTP request headers
 
@@ -78,16 +78,16 @@ Get detailed information about a job (Status, logs...)
 ```javascript
 import SalesTimApi from 'sales_tim_api';
 let defaultClient = SalesTimApi.ApiClient.instance;
-// Configure API key authorization: pluginId
-let pluginId = defaultClient.authentications['pluginId'];
-pluginId.apiKey = 'YOUR API KEY';
+// Configure API key authorization: appId
+let appId = defaultClient.authentications['appId'];
+appId.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//pluginId.apiKeyPrefix = 'Token';
-// Configure API key authorization: pluginSecret
-let pluginSecret = defaultClient.authentications['pluginSecret'];
-pluginSecret.apiKey = 'YOUR API KEY';
+//appId.apiKeyPrefix = 'Token';
+// Configure API key authorization: appSecret
+let appSecret = defaultClient.authentications['appSecret'];
+appSecret.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//pluginSecret.apiKeyPrefix = 'Token';
+//appSecret.apiKeyPrefix = 'Token';
 
 let apiInstance = new SalesTimApi.JobsApi();
 let id = "id_example"; // String | The job ID
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[pluginId](../README.md#pluginId), [pluginSecret](../README.md#pluginSecret)
+[appId](../README.md#appId), [appSecret](../README.md#appSecret)
 
 ### HTTP request headers
 

@@ -283,12 +283,12 @@ namespace Org.OpenAPITools.Api
 
             localVarRequestOptions.Data = provisioningRequest;
 
-            // authentication (pluginId) required
+            // authentication (appId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-APP-ID")))
             {
                 localVarRequestOptions.HeaderParameters.Add("X-APP-ID", this.Configuration.GetApiKeyWithPrefix("X-APP-ID"));
             }
-            // authentication (pluginSecret) required
+            // authentication (appSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-API-KEY")))
             {
                 localVarRequestOptions.HeaderParameters.Add("X-API-KEY", this.Configuration.GetApiKeyWithPrefix("X-API-KEY"));
@@ -351,12 +351,12 @@ namespace Org.OpenAPITools.Api
             
             localVarRequestOptions.Data = provisioningRequest;
 
-            // authentication (pluginId) required
+            // authentication (appId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-APP-ID")))
             {
                 localVarRequestOptions.HeaderParameters.Add("X-APP-ID", this.Configuration.GetApiKeyWithPrefix("X-APP-ID"));
             }
-            // authentication (pluginSecret) required
+            // authentication (appSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-API-KEY")))
             {
                 localVarRequestOptions.HeaderParameters.Add("X-API-KEY", this.Configuration.GetApiKeyWithPrefix("X-API-KEY"));
@@ -417,12 +417,12 @@ namespace Org.OpenAPITools.Api
 
             localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
 
-            // authentication (pluginId) required
+            // authentication (appId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-APP-ID")))
             {
                 localVarRequestOptions.HeaderParameters.Add("X-APP-ID", this.Configuration.GetApiKeyWithPrefix("X-APP-ID"));
             }
-            // authentication (pluginSecret) required
+            // authentication (appSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-API-KEY")))
             {
                 localVarRequestOptions.HeaderParameters.Add("X-API-KEY", this.Configuration.GetApiKeyWithPrefix("X-API-KEY"));
@@ -484,12 +484,12 @@ namespace Org.OpenAPITools.Api
             
             localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
 
-            // authentication (pluginId) required
+            // authentication (appId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-APP-ID")))
             {
                 localVarRequestOptions.HeaderParameters.Add("X-APP-ID", this.Configuration.GetApiKeyWithPrefix("X-APP-ID"));
             }
-            // authentication (pluginSecret) required
+            // authentication (appSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-API-KEY")))
             {
                 localVarRequestOptions.HeaderParameters.Add("X-API-KEY", this.Configuration.GetApiKeyWithPrefix("X-API-KEY"));

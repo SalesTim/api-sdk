@@ -13,24 +13,18 @@
 
 
 import ApiClient from './ApiClient';
-import CatalogTemplate from './model/CatalogTemplate';
-import CatalogTemplateTemplateConfiguration from './model/CatalogTemplateTemplateConfiguration';
-import InlineObject from './model/InlineObject';
-import InlineObject1 from './model/InlineObject1';
-import InlineObject2 from './model/InlineObject2';
+import App from './model/App';
+import AppTemplateConfiguration from './model/AppTemplateConfiguration';
 import Job from './model/Job';
-import Plugin from './model/Plugin';
-import PluginTemplateConfiguration from './model/PluginTemplateConfiguration';
 import ProvisioningRequest from './model/ProvisioningRequest';
 import ProvisioningRequestOnBehalfOfRequester from './model/ProvisioningRequestOnBehalfOfRequester';
 import ProvisioningRequestRequestedMembers from './model/ProvisioningRequestRequestedMembers';
 import StoreCategory from './model/StoreCategory';
 import StoreCategoryLabel from './model/StoreCategoryLabel';
-import StoreTemplate from './model/StoreTemplate';
-import StoreTemplateTemplateConfiguration from './model/StoreTemplateTemplateConfiguration';
+import TemplateIdentifier from './model/TemplateIdentifier';
+import AppsApi from './api/AppsApi';
 import CatalogApi from './api/CatalogApi';
 import JobsApi from './api/JobsApi';
-import PluginsApi from './api/PluginsApi';
 import StoreApi from './api/StoreApi';
 
 
@@ -73,52 +67,22 @@ export {
     ApiClient,
 
     /**
-     * The CatalogTemplate model constructor.
-     * @property {module:model/CatalogTemplate}
+     * The App model constructor.
+     * @property {module:model/App}
      */
-    CatalogTemplate,
+    App,
 
     /**
-     * The CatalogTemplateTemplateConfiguration model constructor.
-     * @property {module:model/CatalogTemplateTemplateConfiguration}
+     * The AppTemplateConfiguration model constructor.
+     * @property {module:model/AppTemplateConfiguration}
      */
-    CatalogTemplateTemplateConfiguration,
-
-    /**
-     * The InlineObject model constructor.
-     * @property {module:model/InlineObject}
-     */
-    InlineObject,
-
-    /**
-     * The InlineObject1 model constructor.
-     * @property {module:model/InlineObject1}
-     */
-    InlineObject1,
-
-    /**
-     * The InlineObject2 model constructor.
-     * @property {module:model/InlineObject2}
-     */
-    InlineObject2,
+    AppTemplateConfiguration,
 
     /**
      * The Job model constructor.
      * @property {module:model/Job}
      */
     Job,
-
-    /**
-     * The Plugin model constructor.
-     * @property {module:model/Plugin}
-     */
-    Plugin,
-
-    /**
-     * The PluginTemplateConfiguration model constructor.
-     * @property {module:model/PluginTemplateConfiguration}
-     */
-    PluginTemplateConfiguration,
 
     /**
      * The ProvisioningRequest model constructor.
@@ -151,16 +115,16 @@ export {
     StoreCategoryLabel,
 
     /**
-     * The StoreTemplate model constructor.
-     * @property {module:model/StoreTemplate}
+     * The TemplateIdentifier model constructor.
+     * @property {module:model/TemplateIdentifier}
      */
-    StoreTemplate,
+    TemplateIdentifier,
 
     /**
-     * The StoreTemplateTemplateConfiguration model constructor.
-     * @property {module:model/StoreTemplateTemplateConfiguration}
-     */
-    StoreTemplateTemplateConfiguration,
+    * The AppsApi service constructor.
+    * @property {module:api/AppsApi}
+    */
+    AppsApi,
 
     /**
     * The CatalogApi service constructor.
@@ -173,12 +137,6 @@ export {
     * @property {module:api/JobsApi}
     */
     JobsApi,
-
-    /**
-    * The PluginsApi service constructor.
-    * @property {module:api/PluginsApi}
-    */
-    PluginsApi,
 
     /**
     * The StoreApi service constructor.

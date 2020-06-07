@@ -75,7 +75,7 @@ namespace Org.OpenAPITools.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //var response = instance.GetStoreTemplate(id);
-            //Assert.IsType<StoreTemplate> (response, "response is StoreTemplate");
+            //Assert.IsType<Object> (response, "response is Object");
         }
         
         /// <summary>
@@ -86,7 +86,7 @@ namespace Org.OpenAPITools.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.GetStoreTemplates();
-            //Assert.IsType<List<StoreTemplate>> (response, "response is List<StoreTemplate>");
+            //Assert.IsType<List<Object>> (response, "response is List<Object>");
         }
         
         /// <summary>
@@ -98,7 +98,7 @@ namespace Org.OpenAPITools.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //var response = instance.GetStoreTemplatesByCategory(id);
-            //Assert.IsType<List<StoreTemplate>> (response, "response is List<StoreTemplate>");
+            //Assert.IsType<List<Object>> (response, "response is List<Object>");
         }
         
     }

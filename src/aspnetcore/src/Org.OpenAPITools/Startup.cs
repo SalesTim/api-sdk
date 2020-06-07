@@ -54,16 +54,16 @@ namespace Org.OpenAPITools
             services.AddTransient<IAuthorizationHandler, ApiKeyRequirementHandler>();
             services.AddAuthorization(authConfig =>
             {
-                authConfig.AddPolicy("pluginId",
+                authConfig.AddPolicy("appId",
                     policyBuilder => policyBuilder
-                        .AddRequirements(new ApiKeyRequirement(new[] { "my-secret-key" },"pluginId")));
+                        .AddRequirements(new ApiKeyRequirement(new[] { "my-secret-key" },"appId")));
             });
             services.AddTransient<IAuthorizationHandler, ApiKeyRequirementHandler>();
             services.AddAuthorization(authConfig =>
             {
-                authConfig.AddPolicy("pluginSecret",
+                authConfig.AddPolicy("appSecret",
                     policyBuilder => policyBuilder
-                        .AddRequirements(new ApiKeyRequirement(new[] { "my-secret-key" },"pluginSecret")));
+                        .AddRequirements(new ApiKeyRequirement(new[] { "my-secret-key" },"appSecret")));
             });
 
             // Add framework services.

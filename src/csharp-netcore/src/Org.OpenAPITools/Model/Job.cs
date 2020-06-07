@@ -72,7 +72,13 @@ namespace Org.OpenAPITools.Model
             /// Enum Paused for value: paused
             /// </summary>
             [EnumMember(Value = "paused")]
-            Paused = 6
+            Paused = 6,
+
+            /// <summary>
+            /// Enum UnknownFutureValue for value: unknownFutureValue
+            /// </summary>
+            [EnumMember(Value = "unknownFutureValue")]
+            UnknownFutureValue = 7
 
         }
 

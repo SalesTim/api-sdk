@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getCatalogTemplates
 
-> [CatalogTemplate] getCatalogTemplates()
+> [Object] getCatalogTemplates()
 
 Get all templates from your corporate catalog
 
@@ -22,19 +22,19 @@ Get all templates from your corporate catalog
 ```javascript
 import SalesTimApi from 'sales_tim_api';
 let defaultClient = SalesTimApi.ApiClient.instance;
+// Configure API key authorization: appId
+let appId = defaultClient.authentications['appId'];
+appId.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//appId.apiKeyPrefix = 'Token';
+// Configure API key authorization: appSecret
+let appSecret = defaultClient.authentications['appSecret'];
+appSecret.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//appSecret.apiKeyPrefix = 'Token';
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-// Configure API key authorization: pluginId
-let pluginId = defaultClient.authentications['pluginId'];
-pluginId.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//pluginId.apiKeyPrefix = 'Token';
-// Configure API key authorization: pluginSecret
-let pluginSecret = defaultClient.authentications['pluginSecret'];
-pluginSecret.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//pluginSecret.apiKeyPrefix = 'Token';
 
 let apiInstance = new SalesTimApi.CatalogApi();
 apiInstance.getCatalogTemplates((error, data, response) => {
@@ -52,11 +52,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[CatalogTemplate]**](CatalogTemplate.md)
+**[Object]**
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth), [pluginId](../README.md#pluginId), [pluginSecret](../README.md#pluginSecret)
+[appId](../README.md#appId), [appSecret](../README.md#appSecret), [bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -66,7 +66,7 @@ This endpoint does not need any parameter.
 
 ## installTemplateFromStore
 
-> CatalogTemplate installTemplateFromStore(inlineObject)
+> Object installTemplateFromStore(templateIdentifier)
 
 Install a template from the public template store to your corporate catalog
 
@@ -82,8 +82,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SalesTimApi.CatalogApi();
-let inlineObject = new SalesTimApi.InlineObject(); // InlineObject | 
-apiInstance.installTemplateFromStore(inlineObject, (error, data, response) => {
+let templateIdentifier = new SalesTimApi.TemplateIdentifier(); // TemplateIdentifier | The template to be installed
+apiInstance.installTemplateFromStore(templateIdentifier, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -97,11 +97,11 @@ apiInstance.installTemplateFromStore(inlineObject, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inlineObject** | [**InlineObject**](InlineObject.md)|  | 
+ **templateIdentifier** | [**TemplateIdentifier**](TemplateIdentifier.md)| The template to be installed | 
 
 ### Return type
 
-[**CatalogTemplate**](CatalogTemplate.md)
+**Object**
 
 ### Authorization
 

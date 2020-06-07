@@ -33,15 +33,16 @@ namespace Org.OpenAPITools.Controllers
         /// <remarks>Create a new provisioning job by sending a ProvisioningRequest</remarks>
         /// <param name="provisioningRequest">A ProvisioningRequest object describing the job to execute</param>
         /// <response code="200">Operation executed successfully.</response>
+        /// <response code="401">API key or app id are missing or invalid.</response>
         /// <response code="404">The ressource cannot be found.</response>
         /// <response code="429">Too many requests. Your request has been throttled.</response>
-        /// <response code="401">API key or app id are missing or invalid.</response>
         /// <response code="500">The server encountered an unexpected condition that prevented it from fulfilling the request.</response>
+        /// <response code="503">Service unavailable.</response>
         /// <response code="0">The server encountered an unexpected condition that prevented it from fulfilling the request.</response>
         [HttpPost]
         [Route("/v1.0/jobs/provisioning")]
-        [Authorize(Policy = "pluginId")]
-        [Authorize(Policy = "pluginSecret")]
+        [Authorize(Policy = "appId")]
+        [Authorize(Policy = "appSecret")]
         [ValidateModelState]
         [SwaggerOperation("CreateProvisioningJob")]
         [SwaggerResponse(statusCode: 200, type: typeof(Job), description: "Operation executed successfully.")]
@@ -50,14 +51,16 @@ namespace Org.OpenAPITools.Controllers
 
             //TODO: Uncomment the next line to return response 200 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(200, default(Job));
+            //TODO: Uncomment the next line to return response 401 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
+            // return StatusCode(401);
             //TODO: Uncomment the next line to return response 404 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(404);
             //TODO: Uncomment the next line to return response 429 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(429);
-            //TODO: Uncomment the next line to return response 401 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
-            // return StatusCode(401);
             //TODO: Uncomment the next line to return response 500 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(500);
+            //TODO: Uncomment the next line to return response 503 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
+            // return StatusCode(503);
             //TODO: Uncomment the next line to return response 0 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(0);
             string exampleJson = null;
@@ -76,15 +79,16 @@ namespace Org.OpenAPITools.Controllers
         /// <remarks>Get detailed information about a job (Status, logs...)</remarks>
         /// <param name="id">The job ID</param>
         /// <response code="200">Operation executed successfully.</response>
+        /// <response code="401">API key or app id are missing or invalid.</response>
         /// <response code="404">The ressource cannot be found.</response>
         /// <response code="429">Too many requests. Your request has been throttled.</response>
-        /// <response code="401">API key or app id are missing or invalid.</response>
         /// <response code="500">The server encountered an unexpected condition that prevented it from fulfilling the request.</response>
+        /// <response code="503">Service unavailable.</response>
         /// <response code="0">The server encountered an unexpected condition that prevented it from fulfilling the request.</response>
         [HttpGet]
         [Route("/v1.0/jobs/{id}")]
-        [Authorize(Policy = "pluginId")]
-        [Authorize(Policy = "pluginSecret")]
+        [Authorize(Policy = "appId")]
+        [Authorize(Policy = "appSecret")]
         [ValidateModelState]
         [SwaggerOperation("GetJob")]
         [SwaggerResponse(statusCode: 200, type: typeof(Job), description: "Operation executed successfully.")]
@@ -93,14 +97,16 @@ namespace Org.OpenAPITools.Controllers
 
             //TODO: Uncomment the next line to return response 200 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(200, default(Job));
+            //TODO: Uncomment the next line to return response 401 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
+            // return StatusCode(401);
             //TODO: Uncomment the next line to return response 404 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(404);
             //TODO: Uncomment the next line to return response 429 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(429);
-            //TODO: Uncomment the next line to return response 401 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
-            // return StatusCode(401);
             //TODO: Uncomment the next line to return response 500 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(500);
+            //TODO: Uncomment the next line to return response 503 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
+            // return StatusCode(503);
             //TODO: Uncomment the next line to return response 0 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(0);
             string exampleJson = null;

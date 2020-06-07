@@ -16,29 +16,29 @@ servers:
 - description: SalesTim API v1.0 (Production environment, uses live data)
   url: https://api.salestim.io/v1.0
 tags:
-- description: Templates from the public template store
+- description: Microsoft Teams and policy templates from the public template store
   externalDocs:
-    url: https://developers.salestim.com/api/reference/resources/store
+    url: https://developers.salestim.com/api/reference/Apis/StoreApi
   name: Store
-- description: Templates from your corporate catalog
+- description: Microsoft Teams and policy templates from your corporate catalog
   externalDocs:
-    url: https://developers.salestim.com/api/reference/resources/catalog
+    url: https://developers.salestim.com/api/reference/Apis/CatalogApi
   name: Catalog
-- description: Platform Plugins (aka "Virtual Apps")
+- description: SalesTim Virtual Apps that may access this API
   externalDocs:
-    url: https://developers.salestim.com/api/reference/resources/plugins
-  name: Plugins
-- description: Jobs
+    url: https://developers.salestim.com/api/reference/resources/AppsApi
+  name: Apps
+- description: Governance jobs that performs governance operations
   externalDocs:
-    url: https://developers.salestim.com/api/reference/resources/jobs
+    url: https://developers.salestim.com/api/reference/Apis/JobsApi
   name: Jobs
 paths:
   /store/templates:
     get:
-      description: |
-        <a href="" target="_blank"> <img src="https://img.shields.io/badge/dynamic/json?url=https://api.salestim.io/v1.0/store/templates&label=Template%20Store&query=$.body.length&color=darkslateblue&suffix=%20templates%20published&logo=microsoft-teams&logoColor=white" /> </a> <hr /> **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
+      description: View all templates from the public [Template Store](https://store.salestim.com)
+        or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/store/#getStoreTemplates
+        url: https://developers.salestim.com/api/reference/Apis/StoreApi.html#getstoretemplates
       operationId: GetStoreTemplates
       responses:
         "200":
@@ -47,15 +47,17 @@ paths:
               schema:
                 $ref: '#/components/schemas/ArrayOfStoreTemplates'
           description: Operation executed successfully.
+        "401":
+          description: API key or app id are missing or invalid.
         "404":
           description: The ressource cannot be found.
         "429":
           description: Too many requests. Your request has been throttled.
-        "401":
-          description: API key or app id are missing or invalid.
         "500":
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
+        "503":
+          description: Service unavailable.
         default:
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
@@ -65,10 +67,10 @@ paths:
       x-eov-operation-handler: controllers/StoreController
   /store/templates/{id}:
     get:
-      description: |
-        <a href="" target="_blank"> <img src="https://img.shields.io/badge/dynamic/json?url=https://api.salestim.io/v1.0/store/templates&label=Template%20Store&query=$.body.length&color=darkslateblue&suffix=%20templates%20published&logo=microsoft-teams&logoColor=white" /> </a> <hr /> **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
+      description: View all templates from the public [Template Store](https://store.salestim.com)
+        or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/store/#getStoreTemplate
+        url: https://developers.salestim.com/api/reference/Apis/StoreApi.html#getstoretemplate
       operationId: GetStoreTemplate
       parameters:
       - description: The template ID
@@ -86,15 +88,17 @@ paths:
               schema:
                 $ref: '#/components/schemas/StoreTemplate'
           description: Operation executed successfully.
+        "401":
+          description: API key or app id are missing or invalid.
         "404":
           description: The ressource cannot be found.
         "429":
           description: Too many requests. Your request has been throttled.
-        "401":
-          description: API key or app id are missing or invalid.
         "500":
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
+        "503":
+          description: Service unavailable.
         default:
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
@@ -104,10 +108,10 @@ paths:
       x-eov-operation-handler: controllers/StoreController
   /store/templates/byCategory/{id}:
     get:
-      description: |
-        <a href="" target="_blank"> <img src="https://img.shields.io/badge/dynamic/json?url=https://api.salestim.io/v1.0/store/templates&label=Template%20Store&query=$.body.length&color=darkslateblue&suffix=%20templates%20published&logo=microsoft-teams&logoColor=white" /> </a> <hr /> **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
+      description: View all templates from the public [Template Store](https://store.salestim.com)
+        or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/store/#getStoreTemplatesByCategory
+        url: https://developers.salestim.com/api/reference/Apis/StoreApi.html#getstoretemplatesbycategory
       operationId: GetStoreTemplatesByCategory
       parameters:
       - description: The category ID
@@ -125,15 +129,17 @@ paths:
               schema:
                 $ref: '#/components/schemas/ArrayOfStoreTemplates'
           description: Operation executed successfully.
+        "401":
+          description: API key or app id are missing or invalid.
         "404":
           description: The ressource cannot be found.
         "429":
           description: Too many requests. Your request has been throttled.
-        "401":
-          description: API key or app id are missing or invalid.
         "500":
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
+        "503":
+          description: Service unavailable.
         default:
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
@@ -143,10 +149,10 @@ paths:
       x-eov-operation-handler: controllers/StoreController
   /store/categories:
     get:
-      description: |
-        <a href="" target="_blank"> <img src="https://img.shields.io/badge/dynamic/json?url=https://api.salestim.io/v1.0/store/templates&label=Template%20Store&query=$.body.length&color=darkslateblue&suffix=%20templates%20published&logo=microsoft-teams&logoColor=white" /> </a> <hr /> **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
+      description: View all templates from the public [Template Store](https://store.salestim.com)
+        or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/store/#getStoreCategories
+        url: https://developers.salestim.com/api/reference/Apis/StoreApi.html#getstorecategories
       operationId: GetStoreCategories
       responses:
         "200":
@@ -155,15 +161,17 @@ paths:
               schema:
                 $ref: '#/components/schemas/ArrayOfStoreCategories'
           description: Operation executed successfully.
+        "401":
+          description: API key or app id are missing or invalid.
         "404":
           description: The ressource cannot be found.
         "429":
           description: Too many requests. Your request has been throttled.
-        "401":
-          description: API key or app id are missing or invalid.
         "500":
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
+        "503":
+          description: Service unavailable.
         default:
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
@@ -175,7 +183,7 @@ paths:
     get:
       description: Get all templates from your corporate catalog
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/catalog/#getCatalogTemplates
+        url: https://developers.salestim.com/api/reference/Apis/CatalogApi.html#getcatalogtemplates
       operationId: GetCatalogTemplates
       responses:
         "200":
@@ -184,22 +192,24 @@ paths:
               schema:
                 $ref: '#/components/schemas/ArrayOfCatalogTemplates'
           description: Operation executed successfully.
+        "401":
+          description: API key or app id are missing or invalid.
         "404":
           description: The ressource cannot be found.
         "429":
           description: Too many requests. Your request has been throttled.
-        "401":
-          description: API key or app id are missing or invalid.
         "500":
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
+        "503":
+          description: Service unavailable.
         default:
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
       security:
       - bearerAuth: []
-      - pluginId: []
-        pluginSecret: []
+      - appId: []
+        appSecret: []
       summary: Get all templates from your corporate catalog
       tags:
       - Catalog
@@ -209,19 +219,13 @@ paths:
       description: Install a template from the public template store to your corporate
         catalog
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/catalog/#installTemplateFromStore
+        url: https://developers.salestim.com/api/reference/Apis/CatalogApi.html#installtemplatefromstore
       operationId: InstallTemplateFromStore
       requestBody:
-        $ref: '#/components/requestBodies/inline_object'
         content:
           application/json:
             schema:
-              description: Object defining the ID of the template to be installed
-              properties:
-                id:
-                  description: The template ID to be installed
-                  type: string
-              type: object
+              $ref: '#/components/schemas/TemplateIdentifier'
         description: The template to be installed
         required: true
       responses:
@@ -231,15 +235,17 @@ paths:
               schema:
                 $ref: '#/components/schemas/CatalogTemplate'
           description: Operation executed successfully.
+        "401":
+          description: API key or app id are missing or invalid.
         "404":
           description: The ressource cannot be found.
         "429":
           description: Too many requests. Your request has been throttled.
-        "401":
-          description: API key or app id are missing or invalid.
         "500":
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
+        "503":
+          description: Service unavailable.
         default:
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
@@ -250,54 +256,49 @@ paths:
       tags:
       - Catalog
       x-eov-operation-handler: controllers/CatalogController
-  /plugins:
+  /apps:
     get:
-      description: Get all plugins in a tenant
+      description: Get all virtual apps in a tenant
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/plugins/#getPlugIns
-      operationId: GetPlugIns
+        url: https://developers.salestim.com/api/reference/Apis/AppsApi.html#getapps
+      operationId: GetApps
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ArrayOfPlugins'
+                $ref: '#/components/schemas/ArrayOfApps'
           description: Operation executed successfully.
+        "401":
+          description: API key or app id are missing or invalid.
         "404":
           description: The ressource cannot be found.
         "429":
           description: Too many requests. Your request has been throttled.
-        "401":
-          description: API key or app id are missing or invalid.
         "500":
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
+        "503":
+          description: Service unavailable.
         default:
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
       security:
       - bearerAuth: []
-      summary: Get all plugins in a tenant
+      summary: Get all virtual apps in a tenant
       tags:
-      - Plugins
-      x-eov-operation-handler: controllers/PluginsController
+      - Apps
+      x-eov-operation-handler: controllers/AppsController
     post:
-      description: Create a new plugin and get its generated ID and secret.
+      description: Create a new virtual app and get its generated ID and secret.
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/plugins/#createPlugin
-      operationId: CreatePlugin
+        url: https://developers.salestim.com/api/reference/Apis/AppsApi.html#createapp
+      operationId: CreateApp
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_1'
         content:
           application/json:
             schema:
-              description: Object defining the properties to update and their new
-                values
-              properties:
-                id:
-                  description: The template ID to be installed
-                  type: string
-              type: object
+              $ref: '#/components/schemas/App'
         description: List of properties to be updated.
         required: true
       responses:
@@ -305,34 +306,36 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Plugin'
+                $ref: '#/components/schemas/App'
           description: Operation executed successfully.
+        "401":
+          description: API key or app id are missing or invalid.
         "404":
           description: The ressource cannot be found.
         "429":
           description: Too many requests. Your request has been throttled.
-        "401":
-          description: API key or app id are missing or invalid.
         "500":
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
+        "503":
+          description: Service unavailable.
         default:
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
       security:
       - bearerAuth: []
-      summary: Create a new plugin
+      summary: Create a virtual app
       tags:
-      - Plugins
-      x-eov-operation-handler: controllers/PluginsController
-  /plugins/{id}/regenerateSecret:
+      - Apps
+      x-eov-operation-handler: controllers/AppsController
+  /apps/{id}/regenerateSecret:
     post:
-      description: Regenerate a plugin secret
+      description: Regenerate a virtual app secret
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/plugins/#regeneratePluginSecret
-      operationId: RegeneratePluginSecret
+        url: https://developers.salestim.com/api/reference/Apis/AppsApi.html#regenerateappsecret
+      operationId: RegenerateAppSecret
       parameters:
-      - description: The plugin ID
+      - description: The virtual app ID
         explode: false
         in: path
         name: id
@@ -345,34 +348,36 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Plugin'
+                $ref: '#/components/schemas/App'
           description: Operation executed successfully.
+        "401":
+          description: API key or app id are missing or invalid.
         "404":
           description: The ressource cannot be found.
         "429":
           description: Too many requests. Your request has been throttled.
-        "401":
-          description: API key or app id are missing or invalid.
         "500":
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
+        "503":
+          description: Service unavailable.
         default:
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
       security:
       - bearerAuth: []
-      summary: Regenerate a plugin secret
+      summary: Regenerate a virtual app secret
       tags:
-      - Plugins
-      x-eov-operation-handler: controllers/PluginsController
-  /plugins/{id}:
+      - Apps
+      x-eov-operation-handler: controllers/AppsController
+  /apps/{id}:
     delete:
-      description: Delete a plugin
+      description: Delete a virtual app
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/plugins/#deletePlugin
-      operationId: DeletePlugin
+        url: https://developers.salestim.com/api/reference/Apis/AppsApi.html#deleteApp
+      operationId: DeleteApp
       parameters:
-      - description: ID of the plugin to delete
+      - description: ID of the virtual app to delete
         explode: false
         in: path
         name: id
@@ -383,31 +388,33 @@ paths:
       responses:
         "200":
           description: Operation executed successfully.
+        "401":
+          description: API key or app id are missing or invalid.
         "404":
           description: The ressource cannot be found.
         "429":
           description: Too many requests. Your request has been throttled.
-        "401":
-          description: API key or app id are missing or invalid.
         "500":
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
+        "503":
+          description: Service unavailable.
         default:
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
       security:
       - bearerAuth: []
-      summary: Delete a plugin
+      summary: Delete a virtual app
       tags:
-      - Plugins
-      x-eov-operation-handler: controllers/PluginsController
+      - Apps
+      x-eov-operation-handler: controllers/AppsController
     put:
-      description: Update a plugin
+      description: Update a virtual app
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/plugins/#updatePlugin
-      operationId: UpdatePlugin
+        url: https://developers.salestim.com/api/reference/Apis/AppsApi.html#updateApp
+      operationId: UpdateApp
       parameters:
-      - description: ID of the plugin to update
+      - description: ID of the virtual app to update
         explode: false
         in: path
         name: id
@@ -416,23 +423,10 @@ paths:
           type: string
         style: simple
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_2'
         content:
           application/json:
             schema:
-              description: Object defining the properties to update and their new
-                values
-              properties:
-                name:
-                  description: The plugin name
-                  type: string
-                description:
-                  description: The plugin description
-                  type: string
-                enabled:
-                  description: The plugin status, enabled or disabled
-                  type: boolean
-              type: object
+              $ref: '#/components/schemas/App'
         description: List of properties to be updated.
         required: true
       responses:
@@ -440,31 +434,33 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Plugin'
+                $ref: '#/components/schemas/App'
           description: Operation executed successfully.
+        "401":
+          description: API key or app id are missing or invalid.
         "404":
           description: The ressource cannot be found.
         "429":
           description: Too many requests. Your request has been throttled.
-        "401":
-          description: API key or app id are missing or invalid.
         "500":
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
+        "503":
+          description: Service unavailable.
         default:
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
       security:
       - bearerAuth: []
-      summary: Update a plugin
+      summary: Update a virtual app
       tags:
-      - Plugins
-      x-eov-operation-handler: controllers/PluginsController
+      - Apps
+      x-eov-operation-handler: controllers/AppsController
   /jobs/{id}:
     get:
       description: Get detailed information about a job (Status, logs...)
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/jobs/#getJob
+        url: https://developers.salestim.com/api/reference/Apis/JobsApi.html#getjob
       operationId: GetJob
       parameters:
       - description: The job ID
@@ -482,21 +478,23 @@ paths:
               schema:
                 $ref: '#/components/schemas/Job'
           description: Operation executed successfully.
+        "401":
+          description: API key or app id are missing or invalid.
         "404":
           description: The ressource cannot be found.
         "429":
           description: Too many requests. Your request has been throttled.
-        "401":
-          description: API key or app id are missing or invalid.
         "500":
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
+        "503":
+          description: Service unavailable.
         default:
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
       security:
-      - pluginId: []
-        pluginSecret: []
+      - appId: []
+        appSecret: []
       summary: Get detailed information about a job (Status, logs...)
       tags:
       - Jobs
@@ -505,7 +503,7 @@ paths:
     post:
       description: Create a new provisioning job by sending a ProvisioningRequest
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/jobs/#createProvisioningJob
+        url: https://developers.salestim.com/api/reference/Apis/JobsApi.html#createprovisioningjob
       operationId: CreateProvisioningJob
       requestBody:
         content:
@@ -521,45 +519,28 @@ paths:
               schema:
                 $ref: '#/components/schemas/Job'
           description: Operation executed successfully.
+        "401":
+          description: API key or app id are missing or invalid.
         "404":
           description: The ressource cannot be found.
         "429":
           description: Too many requests. Your request has been throttled.
-        "401":
-          description: API key or app id are missing or invalid.
         "500":
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
+        "503":
+          description: Service unavailable.
         default:
           description: The server encountered an unexpected condition that prevented
             it from fulfilling the request.
       security:
-      - pluginId: []
-        pluginSecret: []
+      - appId: []
+        appSecret: []
       summary: Create a new provisioning job by sending a ProvisioningRequest
       tags:
       - Jobs
       x-eov-operation-handler: controllers/JobsController
 components:
-  requestBodies:
-    inline_object_1:
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/inline_object_1'
-      required: true
-    inline_object:
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/inline_object'
-      required: true
-    inline_object_2:
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/inline_object_2'
-      required: true
   responses:
     Success:
       description: Operation executed successfully.
@@ -572,28 +553,25 @@ components:
     InternalServerError:
       description: The server encountered an unexpected condition that prevented it
         from fulfilling the request.
+    ServiceUnavailable:
+      description: Service unavailable.
   schemas:
     ArrayOfStoreTemplates:
       description: A list of templates from the public template store
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/store
+        url: https://developers.salestim.com/api/reference/Models/StoreTemplate.html
       items:
         $ref: '#/components/schemas/StoreTemplate'
       type: array
     StoreTemplate:
       description: A template from the public template store
-      example:
-        templateConfiguration:
-          id: id
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/store
-      properties:
-        templateConfiguration:
-          $ref: '#/components/schemas/StoreTemplate_templateConfiguration'
+        url: https://developers.salestim.com/api/reference/Models/StoreTemplate.html
+      type: object
     ArrayOfStoreCategories:
       description: A list of categories from the public template store
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/store
+        url: https://developers.salestim.com/api/reference/Models/StoreCategory.html
       items:
         $ref: '#/components/schemas/StoreCategory'
       type: array
@@ -606,7 +584,7 @@ components:
           fr-fr: fr-fr
         slug: slug
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/store
+        url: https://developers.salestim.com/api/reference/Models/StoreCategory.html
       properties:
         id:
           description: Category ID
@@ -617,31 +595,37 @@ components:
           description: Category slug used for clean and seo-friendly urls
           type: string
     ArrayOfCatalogTemplates:
-      description: A list of templates from the corporate catalog
+      description: A list of templates from your corporate catalog
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/catalog
+        url: https://developers.salestim.com/api/reference/Models/CatalogTemplate.html
       items:
         $ref: '#/components/schemas/CatalogTemplate'
       type: array
     CatalogTemplate:
-      description: A template from the corporate catalog
+      description: A template from your corporate catalog
+      externalDocs:
+        url: https://developers.salestim.com/api/reference/Models/CatalogTemplate.html
+      type: object
+    TemplateIdentifier:
+      description: Object defining the ID of a template
       example:
-        templateConfiguration:
-          id: id
+        id: id
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/catalog
+        url: https://developers.salestim.com/api/reference/Models/TemplateIdentifier.html
       properties:
-        templateConfiguration:
-          $ref: '#/components/schemas/CatalogTemplate_templateConfiguration'
-    ArrayOfPlugins:
-      description: A list of platform plugins (aka "Virtual Apps")
+        id:
+          description: A template ID
+          type: string
+      type: object
+    ArrayOfApps:
+      description: A list of SalesTim virtual apps
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/plugins
+        url: https://developers.salestim.com/api/reference/Models/App.html
       items:
-        $ref: '#/components/schemas/Plugin'
+        $ref: '#/components/schemas/App'
       type: array
-    Plugin:
-      description: A platform plugin (aka "Virtual Apps")
+    App:
+      description: A SalesTim virtual app
       example:
         templateConfiguration:
           createdAt: 2000-01-23T04:56:07.000+00:00
@@ -652,10 +636,10 @@ components:
           secret: secret
           enabled: true
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/plugins
+        url: https://developers.salestim.com/api/reference/Models/App.html
       properties:
         templateConfiguration:
-          $ref: '#/components/schemas/Plugin_templateConfiguration'
+          $ref: '#/components/schemas/App_templateConfiguration'
     Job:
       description: A job that performs some tasks asynchronously
       example:
@@ -668,7 +652,7 @@ components:
         type: type
         status: active
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/jobs
+        url: https://developers.salestim.com/api/reference/Models/Job
       properties:
         id:
           description: The job ID, auto-generated at creation
@@ -691,6 +675,7 @@ components:
           - failed
           - deleyed
           - paused
+          - unknownFutureValue
           type: string
         progress:
           description: The job current progress
@@ -727,7 +712,7 @@ components:
           id: id
           email: email
       externalDocs:
-        url: https://developers.salestim.com/api/reference/resources/jobs
+        url: https://developers.salestim.com/api/reference/Models/ProvisioningRequest
       properties:
         templateId:
           description: The template ID
@@ -757,42 +742,6 @@ components:
       required:
       - requestedTeamName
       - templateId
-    inline_object:
-      description: Object defining the ID of the template to be installed
-      properties:
-        id:
-          description: The template ID to be installed
-          type: string
-      type: object
-    inline_object_1:
-      description: Object defining the properties to update and their new values
-      properties:
-        id:
-          description: The template ID to be installed
-          type: string
-      type: object
-    inline_object_2:
-      description: Object defining the properties to update and their new values
-      properties:
-        name:
-          description: The plugin name
-          type: string
-        description:
-          description: The plugin description
-          type: string
-        enabled:
-          description: The plugin status, enabled or disabled
-          type: boolean
-      type: object
-    StoreTemplate_templateConfiguration:
-      description: Main template properties
-      example:
-        id: id
-      properties:
-        id:
-          description: Template ID
-          type: string
-          x-ms-summary: Template ID
     StoreCategory_label:
       description: Collection of localized category labels
       example:
@@ -805,15 +754,7 @@ components:
         fr-fr:
           description: Category label localized for fr-fr.
           type: string
-    CatalogTemplate_templateConfiguration:
-      description: Main template properties
-      example:
-        id: id
-      properties:
-        id:
-          description: Template ID
-          type: string
-    Plugin_templateConfiguration:
+    App_templateConfiguration:
       description: Main template properties
       example:
         createdAt: 2000-01-23T04:56:07.000+00:00
@@ -825,35 +766,36 @@ components:
         enabled: true
       properties:
         name:
-          description: The plugin name
+          description: The virtual app name
           maxLength: 256
           minLength: 3
           type: string
         description:
-          description: The plugin description
+          description: The virtual app description
           maxLength: 1024
           minLength: 0
           type: string
         createdBy:
-          description: The ID (Fron Azure AD) of the user that created the plugin
+          description: The ID (Fron Azure AD) of the user that created the virtual
+            app
           format: uuid
           type: string
         createdAt:
-          description: The date of creation of the plugin
+          description: The date of creation of the virtual app
           format: date-time
           type: string
         id:
-          description: The plugin ID, auto-generated at creation
+          description: The virtual app ID, auto-generated at creation
           format: uuid
           type: string
         secret:
           description: |
-            The plugin secret, auto-generated at creation. It may also be regenerated later. Be careful, this property is only available at creation or after an explicit regeneration.
+            The virtual app secret, auto-generated at creation. It may also be regenerated later. Be careful, this property is only available at creation or after an explicit regeneration.
           format: password
           type: string
         enabled:
           default: true
-          description: The plugin status, enabled or disabled
+          description: The virtual app status, enabled or disabled
           type: boolean
     ProvisioningRequest_requestedMembers:
       example:
@@ -894,13 +836,13 @@ components:
       description: A valid Microsoft 365 access_token issued by Azure AD
       scheme: bearer
       type: http
-    pluginId:
-      description: A valid plugin ID
+    appId:
+      description: A valid virtual app ID
       in: header
       name: X-APP-ID
       type: apiKey
-    pluginSecret:
-      description: A valid plugin secret
+    appSecret:
+      description: A valid virtual app secret
       in: header
       name: X-API-KEY
       type: apiKey

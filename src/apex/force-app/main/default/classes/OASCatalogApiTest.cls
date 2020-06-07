@@ -14,40 +14,40 @@ private class OASCatalogApiTest {
 
         OASClient client;
         OASCatalogApi api;
-        List<OASCatalogTemplate> response;
-        List<OASCatalogTemplate> expectedResponse;
+        List<Object> response;
+        List<Object> expectedResponse;
         String js = '';
 
         client = new OASClient();
         api = new OASCatalogApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('appId')).setApiKey('foo-bar-api-key');
+
 
         js = JSON.serialize(List.getExample());
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = List.getExample();
-        response = (List<OASCatalogTemplate>) api.getCatalogTemplates();
+        response = (List<Object>) api.getCatalogTemplates();
         System.assertEquals(expectedResponse, response);
         client = new OASClient();
         api = new OASCatalogApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('pluginId')).setApiKey('foo-bar-api-key');
+        ((OAS.ApiKeyAuth)client.getAuthentication('appSecret')).setApiKey('foo-bar-api-key');
 
 
         js = JSON.serialize(List.getExample());
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = List.getExample();
-        response = (List<OASCatalogTemplate>) api.getCatalogTemplates();
+        response = (List<Object>) api.getCatalogTemplates();
         System.assertEquals(expectedResponse, response);
         client = new OASClient();
         api = new OASCatalogApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('pluginSecret')).setApiKey('foo-bar-api-key');
-
 
         js = JSON.serialize(List.getExample());
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = List.getExample();
-        response = (List<OASCatalogTemplate>) api.getCatalogTemplates();
+        response = (List<Object>) api.getCatalogTemplates();
         System.assertEquals(expectedResponse, response);
     }
 
@@ -64,23 +64,17 @@ private class OASCatalogApiTest {
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
         Map<String, Object> params = new Map<String, Object>{
-            'oaSInlineObject' => ''
+            'oaSTemplateIdentifier' => ''
         };
 
         OASClient client;
         OASCatalogApi api;
-        OASCatalogTemplate response;
-        OASCatalogTemplate expectedResponse;
+        Object response;
+        Object expectedResponse;
         String js = '';
 
         client = new OASClient();
         api = new OASCatalogApi(client);
-
-        js = JSON.serialize(OASCatalogTemplate.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASCatalogTemplate.getExample();
-        response = (OASCatalogTemplate) api.installTemplateFromStore(params);
-        System.assertEquals(expectedResponse, response);
+        api.installTemplateFromStore(params);
     }
 }

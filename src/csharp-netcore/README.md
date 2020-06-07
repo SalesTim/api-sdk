@@ -65,26 +65,19 @@ namespace Example
             config.BasePath = "https://api.salestim.io/v1.0";
             // Configure Bearer token for authorization: bearerAuth
             config.AccessToken = "YOUR_BEARER_TOKEN";
-            // Configure API key authorization: pluginId
-            config.ApiKey.Add("X-APP-ID", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("X-APP-ID", "Bearer");
-            // Configure API key authorization: pluginSecret
-            config.ApiKey.Add("X-API-KEY", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("X-API-KEY", "Bearer");
 
-            var apiInstance = new CatalogApi(config);
+            var apiInstance = new AppsApi(config);
+            var app = new App(); // App | List of properties to be updated.
 
             try
             {
-                // Get all templates from your corporate catalog
-                List<CatalogTemplate> result = apiInstance.GetCatalogTemplates();
+                // Create a virtual app
+                App result = apiInstance.CreateApp(app);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling CatalogApi.GetCatalogTemplates: " + e.Message );
+                Debug.Print("Exception when calling AppsApi.CreateApp: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -101,15 +94,15 @@ All URIs are relative to *https://api.salestim.io/v1.0*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AppsApi* | [**CreateApp**](docs/AppsApi.md#createapp) | **POST** /apps | Create a virtual app
+*AppsApi* | [**DeleteApp**](docs/AppsApi.md#deleteapp) | **DELETE** /apps/{id} | Delete a virtual app
+*AppsApi* | [**GetApps**](docs/AppsApi.md#getapps) | **GET** /apps | Get all virtual apps in a tenant
+*AppsApi* | [**RegenerateAppSecret**](docs/AppsApi.md#regenerateappsecret) | **POST** /apps/{id}/regenerateSecret | Regenerate a virtual app secret
+*AppsApi* | [**UpdateApp**](docs/AppsApi.md#updateapp) | **PUT** /apps/{id} | Update a virtual app
 *CatalogApi* | [**GetCatalogTemplates**](docs/CatalogApi.md#getcatalogtemplates) | **GET** /catalog/templates | Get all templates from your corporate catalog
 *CatalogApi* | [**InstallTemplateFromStore**](docs/CatalogApi.md#installtemplatefromstore) | **POST** /catalog/templates/installFromStore | Install a template from the public template store to your corporate catalog
 *JobsApi* | [**CreateProvisioningJob**](docs/JobsApi.md#createprovisioningjob) | **POST** /jobs/provisioning | Create a new provisioning job by sending a ProvisioningRequest
 *JobsApi* | [**GetJob**](docs/JobsApi.md#getjob) | **GET** /jobs/{id} | Get detailed information about a job (Status, logs...)
-*PluginsApi* | [**CreatePlugin**](docs/PluginsApi.md#createplugin) | **POST** /plugins | Create a new plugin
-*PluginsApi* | [**DeletePlugin**](docs/PluginsApi.md#deleteplugin) | **DELETE** /plugins/{id} | Delete a plugin
-*PluginsApi* | [**GetPlugIns**](docs/PluginsApi.md#getplugins) | **GET** /plugins | Get all plugins in a tenant
-*PluginsApi* | [**RegeneratePluginSecret**](docs/PluginsApi.md#regeneratepluginsecret) | **POST** /plugins/{id}/regenerateSecret | Regenerate a plugin secret
-*PluginsApi* | [**UpdatePlugin**](docs/PluginsApi.md#updateplugin) | **PUT** /plugins/{id} | Update a plugin
 *StoreApi* | [**GetStoreCategories**](docs/StoreApi.md#getstorecategories) | **GET** /store/categories | Get all store categories from the public template store
 *StoreApi* | [**GetStoreTemplate**](docs/StoreApi.md#getstoretemplate) | **GET** /store/templates/{id} | Get a store template
 *StoreApi* | [**GetStoreTemplates**](docs/StoreApi.md#getstoretemplates) | **GET** /store/templates | Get all templates from the public template store
@@ -119,42 +112,36 @@ Class | Method | HTTP request | Description
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
- - [Model.CatalogTemplate](docs/CatalogTemplate.md)
- - [Model.CatalogTemplateTemplateConfiguration](docs/CatalogTemplateTemplateConfiguration.md)
- - [Model.InlineObject](docs/InlineObject.md)
- - [Model.InlineObject1](docs/InlineObject1.md)
- - [Model.InlineObject2](docs/InlineObject2.md)
+ - [Model.App](docs/App.md)
+ - [Model.AppTemplateConfiguration](docs/AppTemplateConfiguration.md)
  - [Model.Job](docs/Job.md)
- - [Model.Plugin](docs/Plugin.md)
- - [Model.PluginTemplateConfiguration](docs/PluginTemplateConfiguration.md)
  - [Model.ProvisioningRequest](docs/ProvisioningRequest.md)
  - [Model.ProvisioningRequestOnBehalfOfRequester](docs/ProvisioningRequestOnBehalfOfRequester.md)
  - [Model.ProvisioningRequestRequestedMembers](docs/ProvisioningRequestRequestedMembers.md)
  - [Model.StoreCategory](docs/StoreCategory.md)
  - [Model.StoreCategoryLabel](docs/StoreCategoryLabel.md)
- - [Model.StoreTemplate](docs/StoreTemplate.md)
- - [Model.StoreTemplateTemplateConfiguration](docs/StoreTemplateTemplateConfiguration.md)
+ - [Model.TemplateIdentifier](docs/TemplateIdentifier.md)
 
 
 <a name="documentation-for-authorization"></a>
 ## Documentation for Authorization
 
-<a name="bearerAuth"></a>
-### bearerAuth
-
-- **Type**: Bearer Authentication
-
-<a name="pluginId"></a>
-### pluginId
+<a name="appId"></a>
+### appId
 
 - **Type**: API key
 - **API key parameter name**: X-APP-ID
 - **Location**: HTTP header
 
-<a name="pluginSecret"></a>
-### pluginSecret
+<a name="appSecret"></a>
+### appSecret
 
 - **Type**: API key
 - **API key parameter name**: X-API-KEY
 - **Location**: HTTP header
+
+<a name="bearerAuth"></a>
+### bearerAuth
+
+- **Type**: Bearer Authentication
 

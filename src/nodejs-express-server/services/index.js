@@ -1,11 +1,11 @@
+const AppsService = require('./AppsService');
 const CatalogService = require('./CatalogService');
 const JobsService = require('./JobsService');
-const PluginsService = require('./PluginsService');
 const StoreService = require('./StoreService');
 
 module.exports = {
+  AppsService,
   CatalogService,
   JobsService,
-  PluginsService,
   StoreService,
 };

@@ -66,7 +66,7 @@ export default class JobsApi {
       let formParams = {
       };
 
-      let authNames = ['pluginId', 'pluginSecret'];
+      let authNames = ['appId', 'appSecret'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = Job;
@@ -109,7 +109,7 @@ export default class JobsApi {
       let formParams = {
       };
 
-      let authNames = ['pluginId', 'pluginSecret'];
+      let authNames = ['appId', 'appSecret'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Job;

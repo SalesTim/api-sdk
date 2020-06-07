@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Get all store categories from the public template store
 
-<a href=\"\" target=\"_blank\"> <img src=\"https://img.shields.io/badge/dynamic/json?url=https://api.salestim.io/v1.0/store/templates&label=Template%20Store&query=$.body.length&color=darkslateblue&suffix=%20templates%20published&logo=microsoft-teams&logoColor=white\" /> </a> <hr /> **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
 
 ### Example
 ```csharp
@@ -73,21 +73,22 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Operation executed successfully. |  -  |
+| **401** | API key or app id are missing or invalid. |  -  |
 | **404** | The ressource cannot be found. |  -  |
 | **429** | Too many requests. Your request has been throttled. |  -  |
-| **401** | API key or app id are missing or invalid. |  -  |
 | **500** | The server encountered an unexpected condition that prevented it from fulfilling the request. |  -  |
+| **503** | Service unavailable. |  -  |
 | **0** | The server encountered an unexpected condition that prevented it from fulfilling the request. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getstoretemplate"></a>
 # **GetStoreTemplate**
-> StoreTemplate GetStoreTemplate (string id)
+> Object GetStoreTemplate (string id)
 
 Get a store template
 
-<a href=\"\" target=\"_blank\"> <img src=\"https://img.shields.io/badge/dynamic/json?url=https://api.salestim.io/v1.0/store/templates&label=Template%20Store&query=$.body.length&color=darkslateblue&suffix=%20templates%20published&logo=microsoft-teams&logoColor=white\" /> </a> <hr /> **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
 
 ### Example
 ```csharp
@@ -111,7 +112,7 @@ namespace Example
             try
             {
                 // Get a store template
-                StoreTemplate result = apiInstance.GetStoreTemplate(id);
+                Object result = apiInstance.GetStoreTemplate(id);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -133,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoreTemplate**](StoreTemplate.md)
+**Object**
 
 ### Authorization
 
@@ -148,21 +149,22 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Operation executed successfully. |  -  |
+| **401** | API key or app id are missing or invalid. |  -  |
 | **404** | The ressource cannot be found. |  -  |
 | **429** | Too many requests. Your request has been throttled. |  -  |
-| **401** | API key or app id are missing or invalid. |  -  |
 | **500** | The server encountered an unexpected condition that prevented it from fulfilling the request. |  -  |
+| **503** | Service unavailable. |  -  |
 | **0** | The server encountered an unexpected condition that prevented it from fulfilling the request. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getstoretemplates"></a>
 # **GetStoreTemplates**
-> List&lt;StoreTemplate&gt; GetStoreTemplates ()
+> List&lt;Object&gt; GetStoreTemplates ()
 
 Get all templates from the public template store
 
-<a href=\"\" target=\"_blank\"> <img src=\"https://img.shields.io/badge/dynamic/json?url=https://api.salestim.io/v1.0/store/templates&label=Template%20Store&query=$.body.length&color=darkslateblue&suffix=%20templates%20published&logo=microsoft-teams&logoColor=white\" /> </a> <hr /> **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
 
 ### Example
 ```csharp
@@ -185,7 +187,7 @@ namespace Example
             try
             {
                 // Get all templates from the public template store
-                List<StoreTemplate> result = apiInstance.GetStoreTemplates();
+                List<Object> result = apiInstance.GetStoreTemplates();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -204,7 +206,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;StoreTemplate&gt;**](StoreTemplate.md)
+**List<Object>**
 
 ### Authorization
 
@@ -219,21 +221,22 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Operation executed successfully. |  -  |
+| **401** | API key or app id are missing or invalid. |  -  |
 | **404** | The ressource cannot be found. |  -  |
 | **429** | Too many requests. Your request has been throttled. |  -  |
-| **401** | API key or app id are missing or invalid. |  -  |
 | **500** | The server encountered an unexpected condition that prevented it from fulfilling the request. |  -  |
+| **503** | Service unavailable. |  -  |
 | **0** | The server encountered an unexpected condition that prevented it from fulfilling the request. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getstoretemplatesbycategory"></a>
 # **GetStoreTemplatesByCategory**
-> List&lt;StoreTemplate&gt; GetStoreTemplatesByCategory (string id)
+> List&lt;Object&gt; GetStoreTemplatesByCategory (string id)
 
 Get store template from a specific category
 
-<a href=\"\" target=\"_blank\"> <img src=\"https://img.shields.io/badge/dynamic/json?url=https://api.salestim.io/v1.0/store/templates&label=Template%20Store&query=$.body.length&color=darkslateblue&suffix=%20templates%20published&logo=microsoft-teams&logoColor=white\" /> </a> <hr /> **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
 
 ### Example
 ```csharp
@@ -257,7 +260,7 @@ namespace Example
             try
             {
                 // Get store template from a specific category
-                List<StoreTemplate> result = apiInstance.GetStoreTemplatesByCategory(id);
+                List<Object> result = apiInstance.GetStoreTemplatesByCategory(id);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -279,7 +282,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;StoreTemplate&gt;**](StoreTemplate.md)
+**List<Object>**
 
 ### Authorization
 
@@ -294,10 +297,11 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Operation executed successfully. |  -  |
+| **401** | API key or app id are missing or invalid. |  -  |
 | **404** | The ressource cannot be found. |  -  |
 | **429** | Too many requests. Your request has been throttled. |  -  |
-| **401** | API key or app id are missing or invalid. |  -  |
 | **500** | The server encountered an unexpected condition that prevented it from fulfilling the request. |  -  |
+| **503** | Service unavailable. |  -  |
 | **0** | The server encountered an unexpected condition that prevented it from fulfilling the request. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

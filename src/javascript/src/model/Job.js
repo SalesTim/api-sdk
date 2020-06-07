@@ -154,7 +154,13 @@ Job['StatusEnum'] = {
      * value: "paused"
      * @const
      */
-    "paused": "paused"
+    "paused": "paused",
+
+    /**
+     * value: "unknownFutureValue"
+     * @const
+     */
+    "unknownFutureValue": "unknownFutureValue"
 };
 
 

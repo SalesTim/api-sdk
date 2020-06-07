@@ -27,7 +27,7 @@ public class OASStoreApi {
 
     /**
      * Get all store categories from the public template store
-     * &lt;a href&#x3D;&quot;&quot; target&#x3D;&quot;_blank&quot;&gt; &lt;img src&#x3D;&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)\n
+     * View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
      * @return List<OASStoreCategory>
      * @throws OAS.ApiException if fails to make API call
      */
@@ -48,17 +48,17 @@ public class OASStoreApi {
     }
     /**
      * Get a store template
-     * &lt;a href&#x3D;&quot;&quot; target&#x3D;&quot;_blank&quot;&gt; &lt;img src&#x3D;&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)\n
+     * View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
      * @param id The template ID (required)
-     * @return OASStoreTemplate
+     * @return Object
      * @throws OAS.ApiException if fails to make API call
      */
-    public OASStoreTemplate getStoreTemplate(Map<String, Object> params) {
+    public Object getStoreTemplate(Map<String, Object> params) {
         client.assertNotNull(params.get('id'), 'id');
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (OASStoreTemplate) client.invoke(
+        return (Object) client.invoke(
             'GET', '/store/templates/{id}', '',
             query, form,
             new Map<String, Object>{
@@ -68,20 +68,20 @@ public class OASStoreApi {
             new List<String>{ 'application/json' },
             new List<String>(),
             new List<String>(),
-            OASStoreTemplate.class
+            Object.class
         );
     }
     /**
      * Get all templates from the public template store
-     * &lt;a href&#x3D;&quot;&quot; target&#x3D;&quot;_blank&quot;&gt; &lt;img src&#x3D;&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)\n
-     * @return List<OASStoreTemplate>
+     * View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
+     * @return List<Object>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASStoreTemplate> getStoreTemplates() {
+    public List<Object> getStoreTemplates() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASStoreTemplate>) client.invoke(
+        return (List<Object>) client.invoke(
             'GET', '/store/templates', '',
             query, form,
             new Map<String, Object>(),
@@ -89,22 +89,22 @@ public class OASStoreApi {
             new List<String>{ 'application/json' },
             new List<String>(),
             new List<String>(),
-            List<OASStoreTemplate>.class
+            List<Object>.class
         );
     }
     /**
      * Get store template from a specific category
-     * &lt;a href&#x3D;&quot;&quot; target&#x3D;&quot;_blank&quot;&gt; &lt;img src&#x3D;&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)\n
+     * View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
      * @param id The category ID (required)
-     * @return List<OASStoreTemplate>
+     * @return List<Object>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASStoreTemplate> getStoreTemplatesByCategory(Map<String, Object> params) {
+    public List<Object> getStoreTemplatesByCategory(Map<String, Object> params) {
         client.assertNotNull(params.get('id'), 'id');
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASStoreTemplate>) client.invoke(
+        return (List<Object>) client.invoke(
             'GET', '/store/templates/byCategory/{id}', '',
             query, form,
             new Map<String, Object>{
@@ -114,7 +114,7 @@ public class OASStoreApi {
             new List<String>{ 'application/json' },
             new List<String>(),
             new List<String>(),
-            List<OASStoreTemplate>.class
+            List<Object>.class
         );
     }
 }

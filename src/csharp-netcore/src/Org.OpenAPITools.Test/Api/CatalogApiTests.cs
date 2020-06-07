@@ -63,7 +63,7 @@ namespace Org.OpenAPITools.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.GetCatalogTemplates();
-            //Assert.IsType<List<CatalogTemplate>> (response, "response is List<CatalogTemplate>");
+            //Assert.IsType<List<Object>> (response, "response is List<Object>");
         }
         
         /// <summary>
@@ -73,9 +73,9 @@ namespace Org.OpenAPITools.Test
         public void InstallTemplateFromStoreTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //InlineObject inlineObject = null;
-            //var response = instance.InstallTemplateFromStore(inlineObject);
-            //Assert.IsType<CatalogTemplate> (response, "response is CatalogTemplate");
+            //TemplateIdentifier templateIdentifier = null;
+            //var response = instance.InstallTemplateFromStore(templateIdentifier);
+            //Assert.IsType<Object> (response, "response is Object");
         }
         
     }

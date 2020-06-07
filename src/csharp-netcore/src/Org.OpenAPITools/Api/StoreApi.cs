@@ -31,7 +31,7 @@ namespace Org.OpenAPITools.Api
         /// Get all store categories from the public template store
         /// </summary>
         /// <remarks>
-        /// &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;StoreCategory&gt;</returns>
@@ -41,7 +41,7 @@ namespace Org.OpenAPITools.Api
         /// Get all store categories from the public template store
         /// </summary>
         /// <remarks>
-        /// &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;StoreCategory&gt;</returns>
@@ -50,63 +50,63 @@ namespace Org.OpenAPITools.Api
         /// Get a store template
         /// </summary>
         /// <remarks>
-        /// &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The template ID</param>
-        /// <returns>StoreTemplate</returns>
-        StoreTemplate GetStoreTemplate (string id);
+        /// <returns>Object</returns>
+        Object GetStoreTemplate (string id);
 
         /// <summary>
         /// Get a store template
         /// </summary>
         /// <remarks>
-        /// &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The template ID</param>
-        /// <returns>ApiResponse of StoreTemplate</returns>
-        ApiResponse<StoreTemplate> GetStoreTemplateWithHttpInfo (string id);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> GetStoreTemplateWithHttpInfo (string id);
         /// <summary>
         /// Get all templates from the public template store
         /// </summary>
         /// <remarks>
-        /// &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;StoreTemplate&gt;</returns>
-        List<StoreTemplate> GetStoreTemplates ();
+        /// <returns>List&lt;Object&gt;</returns>
+        List<Object> GetStoreTemplates ();
 
         /// <summary>
         /// Get all templates from the public template store
         /// </summary>
         /// <remarks>
-        /// &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;StoreTemplate&gt;</returns>
-        ApiResponse<List<StoreTemplate>> GetStoreTemplatesWithHttpInfo ();
+        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
+        ApiResponse<List<Object>> GetStoreTemplatesWithHttpInfo ();
         /// <summary>
         /// Get store template from a specific category
         /// </summary>
         /// <remarks>
-        /// &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The category ID</param>
-        /// <returns>List&lt;StoreTemplate&gt;</returns>
-        List<StoreTemplate> GetStoreTemplatesByCategory (string id);
+        /// <returns>List&lt;Object&gt;</returns>
+        List<Object> GetStoreTemplatesByCategory (string id);
 
         /// <summary>
         /// Get store template from a specific category
         /// </summary>
         /// <remarks>
-        /// &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The category ID</param>
-        /// <returns>ApiResponse of List&lt;StoreTemplate&gt;</returns>
-        ApiResponse<List<StoreTemplate>> GetStoreTemplatesByCategoryWithHttpInfo (string id);
+        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
+        ApiResponse<List<Object>> GetStoreTemplatesByCategoryWithHttpInfo (string id);
         #endregion Synchronous Operations
     }
 
@@ -120,7 +120,7 @@ namespace Org.OpenAPITools.Api
         /// Get all store categories from the public template store
         /// </summary>
         /// <remarks>
-        /// &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;StoreCategory&gt;</returns>
@@ -130,7 +130,7 @@ namespace Org.OpenAPITools.Api
         /// Get all store categories from the public template store
         /// </summary>
         /// <remarks>
-        /// &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;StoreCategory&gt;)</returns>
@@ -139,63 +139,63 @@ namespace Org.OpenAPITools.Api
         /// Get a store template
         /// </summary>
         /// <remarks>
-        /// &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The template ID</param>
-        /// <returns>Task of StoreTemplate</returns>
-        System.Threading.Tasks.Task<StoreTemplate> GetStoreTemplateAsync (string id);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> GetStoreTemplateAsync (string id);
 
         /// <summary>
         /// Get a store template
         /// </summary>
         /// <remarks>
-        /// &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The template ID</param>
-        /// <returns>Task of ApiResponse (StoreTemplate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StoreTemplate>> GetStoreTemplateAsyncWithHttpInfo (string id);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetStoreTemplateAsyncWithHttpInfo (string id);
         /// <summary>
         /// Get all templates from the public template store
         /// </summary>
         /// <remarks>
-        /// &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;StoreTemplate&gt;</returns>
-        System.Threading.Tasks.Task<List<StoreTemplate>> GetStoreTemplatesAsync ();
+        /// <returns>Task of List&lt;Object&gt;</returns>
+        System.Threading.Tasks.Task<List<Object>> GetStoreTemplatesAsync ();
 
         /// <summary>
         /// Get all templates from the public template store
         /// </summary>
         /// <remarks>
-        /// &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;StoreTemplate&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<StoreTemplate>>> GetStoreTemplatesAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<Object>>> GetStoreTemplatesAsyncWithHttpInfo ();
         /// <summary>
         /// Get store template from a specific category
         /// </summary>
         /// <remarks>
-        /// &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The category ID</param>
-        /// <returns>Task of List&lt;StoreTemplate&gt;</returns>
-        System.Threading.Tasks.Task<List<StoreTemplate>> GetStoreTemplatesByCategoryAsync (string id);
+        /// <returns>Task of List&lt;Object&gt;</returns>
+        System.Threading.Tasks.Task<List<Object>> GetStoreTemplatesByCategoryAsync (string id);
 
         /// <summary>
         /// Get store template from a specific category
         /// </summary>
         /// <remarks>
-        /// &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The category ID</param>
-        /// <returns>Task of ApiResponse (List&lt;StoreTemplate&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<StoreTemplate>>> GetStoreTemplatesByCategoryAsyncWithHttpInfo (string id);
+        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<Object>>> GetStoreTemplatesByCategoryAsyncWithHttpInfo (string id);
         #endregion Asynchronous Operations
     }
 
@@ -317,7 +317,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Get all store categories from the public template store &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// Get all store categories from the public template store View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;StoreCategory&gt;</returns>
@@ -328,7 +328,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Get all store categories from the public template store &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// Get all store categories from the public template store View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;StoreCategory&gt;</returns>
@@ -365,7 +365,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Get all store categories from the public template store &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// Get all store categories from the public template store View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;StoreCategory&gt;</returns>
@@ -377,7 +377,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Get all store categories from the public template store &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// Get all store categories from the public template store View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;StoreCategory&gt;)</returns>
@@ -416,24 +416,24 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Get a store template &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// Get a store template View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The template ID</param>
-        /// <returns>StoreTemplate</returns>
-        public StoreTemplate GetStoreTemplate (string id)
+        /// <returns>Object</returns>
+        public Object GetStoreTemplate (string id)
         {
-             Org.OpenAPITools.Client.ApiResponse<StoreTemplate> localVarResponse = GetStoreTemplateWithHttpInfo(id);
+             Org.OpenAPITools.Client.ApiResponse<Object> localVarResponse = GetStoreTemplateWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get a store template &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// Get a store template View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The template ID</param>
-        /// <returns>ApiResponse of StoreTemplate</returns>
-        public Org.OpenAPITools.Client.ApiResponse< StoreTemplate > GetStoreTemplateWithHttpInfo (string id)
+        /// <returns>ApiResponse of Object</returns>
+        public Org.OpenAPITools.Client.ApiResponse< Object > GetStoreTemplateWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -459,7 +459,7 @@ namespace Org.OpenAPITools.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get< StoreTemplate >("/store/templates/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get< Object >("/store/templates/{id}", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -471,25 +471,25 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Get a store template &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// Get a store template View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The template ID</param>
-        /// <returns>Task of StoreTemplate</returns>
-        public async System.Threading.Tasks.Task<StoreTemplate> GetStoreTemplateAsync (string id)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> GetStoreTemplateAsync (string id)
         {
-             Org.OpenAPITools.Client.ApiResponse<StoreTemplate> localVarResponse = await GetStoreTemplateAsyncWithHttpInfo(id);
+             Org.OpenAPITools.Client.ApiResponse<Object> localVarResponse = await GetStoreTemplateAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get a store template &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// Get a store template View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The template ID</param>
-        /// <returns>Task of ApiResponse (StoreTemplate)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<StoreTemplate>> GetStoreTemplateAsyncWithHttpInfo (string id)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Object>> GetStoreTemplateAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -517,7 +517,7 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<StoreTemplate>("/store/templates/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/store/templates/{id}", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -529,22 +529,22 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Get all templates from the public template store &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// Get all templates from the public template store View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;StoreTemplate&gt;</returns>
-        public List<StoreTemplate> GetStoreTemplates ()
+        /// <returns>List&lt;Object&gt;</returns>
+        public List<Object> GetStoreTemplates ()
         {
-             Org.OpenAPITools.Client.ApiResponse<List<StoreTemplate>> localVarResponse = GetStoreTemplatesWithHttpInfo();
+             Org.OpenAPITools.Client.ApiResponse<List<Object>> localVarResponse = GetStoreTemplatesWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get all templates from the public template store &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// Get all templates from the public template store View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;StoreTemplate&gt;</returns>
-        public Org.OpenAPITools.Client.ApiResponse< List<StoreTemplate> > GetStoreTemplatesWithHttpInfo ()
+        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
+        public Org.OpenAPITools.Client.ApiResponse< List<Object> > GetStoreTemplatesWithHttpInfo ()
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -565,7 +565,7 @@ namespace Org.OpenAPITools.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get< List<StoreTemplate> >("/store/templates", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get< List<Object> >("/store/templates", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -577,23 +577,23 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Get all templates from the public template store &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// Get all templates from the public template store View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;StoreTemplate&gt;</returns>
-        public async System.Threading.Tasks.Task<List<StoreTemplate>> GetStoreTemplatesAsync ()
+        /// <returns>Task of List&lt;Object&gt;</returns>
+        public async System.Threading.Tasks.Task<List<Object>> GetStoreTemplatesAsync ()
         {
-             Org.OpenAPITools.Client.ApiResponse<List<StoreTemplate>> localVarResponse = await GetStoreTemplatesAsyncWithHttpInfo();
+             Org.OpenAPITools.Client.ApiResponse<List<Object>> localVarResponse = await GetStoreTemplatesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get all templates from the public template store &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// Get all templates from the public template store View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;StoreTemplate&gt;)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<StoreTemplate>>> GetStoreTemplatesAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<Object>>> GetStoreTemplatesAsyncWithHttpInfo ()
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -616,7 +616,7 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<StoreTemplate>>("/store/templates", localVarRequestOptions, this.Configuration);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<Object>>("/store/templates", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -628,24 +628,24 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Get store template from a specific category &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// Get store template from a specific category View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The category ID</param>
-        /// <returns>List&lt;StoreTemplate&gt;</returns>
-        public List<StoreTemplate> GetStoreTemplatesByCategory (string id)
+        /// <returns>List&lt;Object&gt;</returns>
+        public List<Object> GetStoreTemplatesByCategory (string id)
         {
-             Org.OpenAPITools.Client.ApiResponse<List<StoreTemplate>> localVarResponse = GetStoreTemplatesByCategoryWithHttpInfo(id);
+             Org.OpenAPITools.Client.ApiResponse<List<Object>> localVarResponse = GetStoreTemplatesByCategoryWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get store template from a specific category &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// Get store template from a specific category View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The category ID</param>
-        /// <returns>ApiResponse of List&lt;StoreTemplate&gt;</returns>
-        public Org.OpenAPITools.Client.ApiResponse< List<StoreTemplate> > GetStoreTemplatesByCategoryWithHttpInfo (string id)
+        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
+        public Org.OpenAPITools.Client.ApiResponse< List<Object> > GetStoreTemplatesByCategoryWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -671,7 +671,7 @@ namespace Org.OpenAPITools.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get< List<StoreTemplate> >("/store/templates/byCategory/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get< List<Object> >("/store/templates/byCategory/{id}", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -683,25 +683,25 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Get store template from a specific category &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// Get store template from a specific category View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The category ID</param>
-        /// <returns>Task of List&lt;StoreTemplate&gt;</returns>
-        public async System.Threading.Tasks.Task<List<StoreTemplate>> GetStoreTemplatesByCategoryAsync (string id)
+        /// <returns>Task of List&lt;Object&gt;</returns>
+        public async System.Threading.Tasks.Task<List<Object>> GetStoreTemplatesByCategoryAsync (string id)
         {
-             Org.OpenAPITools.Client.ApiResponse<List<StoreTemplate>> localVarResponse = await GetStoreTemplatesByCategoryAsyncWithHttpInfo(id);
+             Org.OpenAPITools.Client.ApiResponse<List<Object>> localVarResponse = await GetStoreTemplatesByCategoryAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get store template from a specific category &lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) 
+        /// Get store template from a specific category View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The category ID</param>
-        /// <returns>Task of ApiResponse (List&lt;StoreTemplate&gt;)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<StoreTemplate>>> GetStoreTemplatesByCategoryAsyncWithHttpInfo (string id)
+        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<Object>>> GetStoreTemplatesByCategoryAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -729,7 +729,7 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<StoreTemplate>>("/store/templates/byCategory/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<Object>>("/store/templates/byCategory/{id}", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {

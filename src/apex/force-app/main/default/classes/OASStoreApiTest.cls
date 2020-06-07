@@ -3,7 +3,7 @@ private class OASStoreApiTest {
     /**
      * Get all store categories from the public template store
      *
-     * &lt;a href&#x3D;&quot;&quot; target&#x3D;&quot;_blank&quot;&gt; &lt;img src&#x3D;&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)\n
+     * View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
      */
     @isTest
     private static void getStoreCategoriesTest() {
@@ -31,7 +31,7 @@ private class OASStoreApiTest {
     /**
      * Get a store template
      *
-     * &lt;a href&#x3D;&quot;&quot; target&#x3D;&quot;_blank&quot;&gt; &lt;img src&#x3D;&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)\n
+     * View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
      */
     @isTest
     private static void getStoreTemplateTest() {
@@ -46,24 +46,19 @@ private class OASStoreApiTest {
 
         OASClient client;
         OASStoreApi api;
-        OASStoreTemplate response;
-        OASStoreTemplate expectedResponse;
+        Object response;
+        Object expectedResponse;
         String js = '';
 
         api = new OASStoreApi(new OASClient());
 
-        js = JSON.serialize(OASStoreTemplate.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASStoreTemplate.getExample();
-        response = (OASStoreTemplate) api.getStoreTemplate(params);
-        System.assertEquals(expectedResponse, response);
+        api.getStoreTemplate(params);
     }
 
     /**
      * Get all templates from the public template store
      *
-     * &lt;a href&#x3D;&quot;&quot; target&#x3D;&quot;_blank&quot;&gt; &lt;img src&#x3D;&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)\n
+     * View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
      */
     @isTest
     private static void getStoreTemplatesTest() {
@@ -74,8 +69,8 @@ private class OASStoreApiTest {
 
         OASClient client;
         OASStoreApi api;
-        List<OASStoreTemplate> response;
-        List<OASStoreTemplate> expectedResponse;
+        List<Object> response;
+        List<Object> expectedResponse;
         String js = '';
 
         api = new OASStoreApi(new OASClient());
@@ -84,14 +79,14 @@ private class OASStoreApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = List.getExample();
-        response = (List<OASStoreTemplate>) api.getStoreTemplates();
+        response = (List<Object>) api.getStoreTemplates();
         System.assertEquals(expectedResponse, response);
     }
 
     /**
      * Get store template from a specific category
      *
-     * &lt;a href&#x3D;&quot;&quot; target&#x3D;&quot;_blank&quot;&gt; &lt;img src&#x3D;&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)\n
+     * View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)
      */
     @isTest
     private static void getStoreTemplatesByCategoryTest() {
@@ -106,8 +101,8 @@ private class OASStoreApiTest {
 
         OASClient client;
         OASStoreApi api;
-        List<OASStoreTemplate> response;
-        List<OASStoreTemplate> expectedResponse;
+        List<Object> response;
+        List<Object> expectedResponse;
         String js = '';
 
         api = new OASStoreApi(new OASClient());
@@ -116,7 +111,7 @@ private class OASStoreApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = List.getExample();
-        response = (List<OASStoreTemplate>) api.getStoreTemplatesByCategory(params);
+        response = (List<Object>) api.getStoreTemplatesByCategory(params);
         System.assertEquals(expectedResponse, response);
     }
 }

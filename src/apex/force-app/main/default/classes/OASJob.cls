@@ -41,7 +41,8 @@ public class OASJob implements OAS.MappedProperties {
         COMPLETED,
         FAILED,
         DELEYED,
-        PAUSED
+        PAUSED,
+        UNKNOWNFUTUREVALUE
     }
 
     /**

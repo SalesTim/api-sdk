@@ -24,7 +24,7 @@ private class OASJobsApiTest {
 
         client = new OASClient();
         api = new OASJobsApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('pluginId')).setApiKey('foo-bar-api-key');
+        ((OAS.ApiKeyAuth)client.getAuthentication('appId')).setApiKey('foo-bar-api-key');
 
 
         js = JSON.serialize(OASJob.getExample());
@@ -35,7 +35,7 @@ private class OASJobsApiTest {
         System.assertEquals(expectedResponse, response);
         client = new OASClient();
         api = new OASJobsApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('pluginSecret')).setApiKey('foo-bar-api-key');
+        ((OAS.ApiKeyAuth)client.getAuthentication('appSecret')).setApiKey('foo-bar-api-key');
 
 
         js = JSON.serialize(OASJob.getExample());
@@ -70,7 +70,7 @@ private class OASJobsApiTest {
 
         client = new OASClient();
         api = new OASJobsApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('pluginId')).setApiKey('foo-bar-api-key');
+        ((OAS.ApiKeyAuth)client.getAuthentication('appId')).setApiKey('foo-bar-api-key');
 
 
         js = JSON.serialize(OASJob.getExample());
@@ -81,7 +81,7 @@ private class OASJobsApiTest {
         System.assertEquals(expectedResponse, response);
         client = new OASClient();
         api = new OASJobsApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('pluginSecret')).setApiKey('foo-bar-api-key');
+        ((OAS.ApiKeyAuth)client.getAuthentication('appSecret')).setApiKey('foo-bar-api-key');
 
 
         js = JSON.serialize(OASJob.getExample());

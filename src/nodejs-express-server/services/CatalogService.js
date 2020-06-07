@@ -24,14 +24,14 @@ const getCatalogTemplates = () => new Promise(
 * Install a template from the public template store to your corporate catalog
 * Install a template from the public template store to your corporate catalog
 *
-* inlineObject InlineObject 
-* returns CatalogTemplate
+* templateIdentifier TemplateIdentifier The template to be installed
+* returns Object
 * */
-const installTemplateFromStore = ({ inlineObject }) => new Promise(
+const installTemplateFromStore = ({ templateIdentifier }) => new Promise(
   async (resolve, reject) => {
     try {
       resolve(Service.successResponse({
-        inlineObject,
+        templateIdentifier,
       }));
     } catch (e) {
       reject(Service.rejectResponse(

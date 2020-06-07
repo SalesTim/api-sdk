@@ -28,46 +28,46 @@ public class OASCatalogApi {
     /**
      * Get all templates from your corporate catalog
      * Get all templates from your corporate catalog
-     * @return List<OASCatalogTemplate>
+     * @return List<Object>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASCatalogTemplate> getCatalogTemplates() {
+    public List<Object> getCatalogTemplates() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (List<OASCatalogTemplate>) client.invoke(
+        return (List<Object>) client.invoke(
             'GET', '/catalog/templates', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'application/json' },
             new List<String>(),
-            new List<String> { 'bearerAuth', 'pluginId', 'pluginSecret' },
-            List<OASCatalogTemplate>.class
+            new List<String> { 'appId', 'appSecret', 'bearerAuth' },
+            List<Object>.class
         );
     }
     /**
      * Install a template from the public template store to your corporate catalog
      * Install a template from the public template store to your corporate catalog
-     * @param oaSInlineObject  (required)
-     * @return OASCatalogTemplate
+     * @param oaSTemplateIdentifier The template to be installed (required)
+     * @return Object
      * @throws OAS.ApiException if fails to make API call
      */
-    public OASCatalogTemplate installTemplateFromStore(Map<String, Object> params) {
-        client.assertNotNull(params.get('oaSInlineObject'), 'oaSInlineObject');
+    public Object installTemplateFromStore(Map<String, Object> params) {
+        client.assertNotNull(params.get('oaSTemplateIdentifier'), 'oaSTemplateIdentifier');
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (OASCatalogTemplate) client.invoke(
+        return (Object) client.invoke(
             'POST', '/catalog/templates/installFromStore',
-            (OASInlineObject) params.get('oaSInlineObject'),
+            (OASTemplateIdentifier) params.get('oaSTemplateIdentifier'),
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'application/json' },
             new List<String>{ 'application/json' },
             new List<String> { 'bearerAuth' },
-            OASCatalogTemplate.class
+            Object.class
         );
     }
 }

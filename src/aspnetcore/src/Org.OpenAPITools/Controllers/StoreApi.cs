@@ -30,12 +30,13 @@ namespace Org.OpenAPITools.Controllers
         /// <summary>
         /// Get all store categories from the public template store
         /// </summary>
-        /// <remarks>&lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) </remarks>
+        /// <remarks>View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)</remarks>
         /// <response code="200">Operation executed successfully.</response>
+        /// <response code="401">API key or app id are missing or invalid.</response>
         /// <response code="404">The ressource cannot be found.</response>
         /// <response code="429">Too many requests. Your request has been throttled.</response>
-        /// <response code="401">API key or app id are missing or invalid.</response>
         /// <response code="500">The server encountered an unexpected condition that prevented it from fulfilling the request.</response>
+        /// <response code="503">Service unavailable.</response>
         /// <response code="0">The server encountered an unexpected condition that prevented it from fulfilling the request.</response>
         [HttpGet]
         [Route("/v1.0/store/categories")]
@@ -47,14 +48,16 @@ namespace Org.OpenAPITools.Controllers
 
             //TODO: Uncomment the next line to return response 200 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(200, default(List<StoreCategory>));
+            //TODO: Uncomment the next line to return response 401 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
+            // return StatusCode(401);
             //TODO: Uncomment the next line to return response 404 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(404);
             //TODO: Uncomment the next line to return response 429 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(429);
-            //TODO: Uncomment the next line to return response 401 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
-            // return StatusCode(401);
             //TODO: Uncomment the next line to return response 500 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(500);
+            //TODO: Uncomment the next line to return response 503 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
+            // return StatusCode(503);
             //TODO: Uncomment the next line to return response 0 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(0);
             string exampleJson = null;
@@ -70,40 +73,42 @@ namespace Org.OpenAPITools.Controllers
         /// <summary>
         /// Get a store template
         /// </summary>
-        /// <remarks>&lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) </remarks>
+        /// <remarks>View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)</remarks>
         /// <param name="id">The template ID</param>
         /// <response code="200">Operation executed successfully.</response>
+        /// <response code="401">API key or app id are missing or invalid.</response>
         /// <response code="404">The ressource cannot be found.</response>
         /// <response code="429">Too many requests. Your request has been throttled.</response>
-        /// <response code="401">API key or app id are missing or invalid.</response>
         /// <response code="500">The server encountered an unexpected condition that prevented it from fulfilling the request.</response>
+        /// <response code="503">Service unavailable.</response>
         /// <response code="0">The server encountered an unexpected condition that prevented it from fulfilling the request.</response>
         [HttpGet]
         [Route("/v1.0/store/templates/{id}")]
         [ValidateModelState]
         [SwaggerOperation("GetStoreTemplate")]
-        [SwaggerResponse(statusCode: 200, type: typeof(StoreTemplate), description: "Operation executed successfully.")]
+        [SwaggerResponse(statusCode: 200, type: typeof(Object), description: "Operation executed successfully.")]
         public virtual IActionResult GetStoreTemplate([FromRoute][Required]string id)
         { 
 
             //TODO: Uncomment the next line to return response 200 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
-            // return StatusCode(200, default(StoreTemplate));
+            // return StatusCode(200, default(Object));
+            //TODO: Uncomment the next line to return response 401 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
+            // return StatusCode(401);
             //TODO: Uncomment the next line to return response 404 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(404);
             //TODO: Uncomment the next line to return response 429 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(429);
-            //TODO: Uncomment the next line to return response 401 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
-            // return StatusCode(401);
             //TODO: Uncomment the next line to return response 500 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(500);
+            //TODO: Uncomment the next line to return response 503 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
+            // return StatusCode(503);
             //TODO: Uncomment the next line to return response 0 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(0);
             string exampleJson = null;
-            exampleJson = "{\n  \"templateConfiguration\" : {\n    \"id\" : \"id\"\n  }\n}";
             
             var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<StoreTemplate>(exampleJson)
-            : default(StoreTemplate);
+            ? JsonConvert.DeserializeObject<Object>(exampleJson)
+            : default(Object);
             //TODO: Change the data returned
             return new ObjectResult(example);
         }
@@ -111,39 +116,42 @@ namespace Org.OpenAPITools.Controllers
         /// <summary>
         /// Get all templates from the public template store
         /// </summary>
-        /// <remarks>&lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) </remarks>
+        /// <remarks>View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)</remarks>
         /// <response code="200">Operation executed successfully.</response>
+        /// <response code="401">API key or app id are missing or invalid.</response>
         /// <response code="404">The ressource cannot be found.</response>
         /// <response code="429">Too many requests. Your request has been throttled.</response>
-        /// <response code="401">API key or app id are missing or invalid.</response>
         /// <response code="500">The server encountered an unexpected condition that prevented it from fulfilling the request.</response>
+        /// <response code="503">Service unavailable.</response>
         /// <response code="0">The server encountered an unexpected condition that prevented it from fulfilling the request.</response>
         [HttpGet]
         [Route("/v1.0/store/templates")]
         [ValidateModelState]
         [SwaggerOperation("GetStoreTemplates")]
-        [SwaggerResponse(statusCode: 200, type: typeof(List<StoreTemplate>), description: "Operation executed successfully.")]
+        [SwaggerResponse(statusCode: 200, type: typeof(List<Object>), description: "Operation executed successfully.")]
         public virtual IActionResult GetStoreTemplates()
         { 
 
             //TODO: Uncomment the next line to return response 200 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
-            // return StatusCode(200, default(List<StoreTemplate>));
+            // return StatusCode(200, default(List<Object>));
+            //TODO: Uncomment the next line to return response 401 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
+            // return StatusCode(401);
             //TODO: Uncomment the next line to return response 404 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(404);
             //TODO: Uncomment the next line to return response 429 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(429);
-            //TODO: Uncomment the next line to return response 401 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
-            // return StatusCode(401);
             //TODO: Uncomment the next line to return response 500 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(500);
+            //TODO: Uncomment the next line to return response 503 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
+            // return StatusCode(503);
             //TODO: Uncomment the next line to return response 0 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(0);
             string exampleJson = null;
-            exampleJson = "{\n  \"templateConfiguration\" : {\n    \"id\" : \"id\"\n  }\n}";
+            exampleJson = "null";
             
             var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<List<StoreTemplate>>(exampleJson)
-            : default(List<StoreTemplate>);
+            ? JsonConvert.DeserializeObject<List<Object>>(exampleJson)
+            : default(List<Object>);
             //TODO: Change the data returned
             return new ObjectResult(example);
         }
@@ -151,40 +159,43 @@ namespace Org.OpenAPITools.Controllers
         /// <summary>
         /// Get store template from a specific category
         /// </summary>
-        /// <remarks>&lt;a href&#x3D;\&quot;\&quot; target&#x3D;\&quot;_blank\&quot;&gt; &lt;img src&#x3D;\&quot;https://img.shields.io/badge/dynamic/json?url&#x3D;https://api.salestim.io/v1.0/store/templates&amp;label&#x3D;Template%20Store&amp;query&#x3D;$.body.length&amp;color&#x3D;darkslateblue&amp;suffix&#x3D;%20templates%20published&amp;logo&#x3D;microsoft-teams&amp;logoColor&#x3D;white\&quot; /&gt; &lt;/a&gt; &lt;hr /&gt; **View** all templates from the [Public Template Store](https://store.salestim.com) or **Publish** your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests) </remarks>
+        /// <remarks>View all templates from the public [Template Store](https://store.salestim.com) or publish your own templates to the [Template Manifests Repository](https://github.com/SalesTim/template-manifests)</remarks>
         /// <param name="id">The category ID</param>
         /// <response code="200">Operation executed successfully.</response>
+        /// <response code="401">API key or app id are missing or invalid.</response>
         /// <response code="404">The ressource cannot be found.</response>
         /// <response code="429">Too many requests. Your request has been throttled.</response>
-        /// <response code="401">API key or app id are missing or invalid.</response>
         /// <response code="500">The server encountered an unexpected condition that prevented it from fulfilling the request.</response>
+        /// <response code="503">Service unavailable.</response>
         /// <response code="0">The server encountered an unexpected condition that prevented it from fulfilling the request.</response>
         [HttpGet]
         [Route("/v1.0/store/templates/byCategory/{id}")]
         [ValidateModelState]
         [SwaggerOperation("GetStoreTemplatesByCategory")]
-        [SwaggerResponse(statusCode: 200, type: typeof(List<StoreTemplate>), description: "Operation executed successfully.")]
+        [SwaggerResponse(statusCode: 200, type: typeof(List<Object>), description: "Operation executed successfully.")]
         public virtual IActionResult GetStoreTemplatesByCategory([FromRoute][Required]string id)
         { 
 
             //TODO: Uncomment the next line to return response 200 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
-            // return StatusCode(200, default(List<StoreTemplate>));
+            // return StatusCode(200, default(List<Object>));
+            //TODO: Uncomment the next line to return response 401 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
+            // return StatusCode(401);
             //TODO: Uncomment the next line to return response 404 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(404);
             //TODO: Uncomment the next line to return response 429 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(429);
-            //TODO: Uncomment the next line to return response 401 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
-            // return StatusCode(401);
             //TODO: Uncomment the next line to return response 500 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(500);
+            //TODO: Uncomment the next line to return response 503 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
+            // return StatusCode(503);
             //TODO: Uncomment the next line to return response 0 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(0);
             string exampleJson = null;
-            exampleJson = "{\n  \"templateConfiguration\" : {\n    \"id\" : \"id\"\n  }\n}";
+            exampleJson = "null";
             
             var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<List<StoreTemplate>>(exampleJson)
-            : default(List<StoreTemplate>);
+            ? JsonConvert.DeserializeObject<List<Object>>(exampleJson)
+            : default(List<Object>);
             //TODO: Change the data returned
             return new ObjectResult(example);
         }

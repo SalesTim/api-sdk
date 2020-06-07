@@ -42,13 +42,17 @@ If everything is set correctly:
 Please follow the [installation](#installation) instruction and execute the following Apex code:
 
 ```java
-OASCatalogApi api = new OASCatalogApi();
+OASAppsApi api = new OASAppsApi();
 OASClient client = api.getClient();
 
 
+Map<String, Object> params = new Map<String, Object>{
+    'oaSApp' => ''
+};
+
 try {
     // cross your fingers
-    List<OASCatalogTemplate> result = api.getCatalogTemplates();
+    OASApp result = api.createApp(params);
     System.debug(result);
 } catch (OAS.ApiException e) {
     // ...handle your exceptions
@@ -61,15 +65,15 @@ All URIs are relative to *https://api.salestim.io/v1.0*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*OASAppsApi* | [**createApp**](OASAppsApi.md#createApp) | **POST** /apps | Create a virtual app
+*OASAppsApi* | [**deleteApp**](OASAppsApi.md#deleteApp) | **DELETE** /apps/{id} | Delete a virtual app
+*OASAppsApi* | [**getApps**](OASAppsApi.md#getApps) | **GET** /apps | Get all virtual apps in a tenant
+*OASAppsApi* | [**regenerateAppSecret**](OASAppsApi.md#regenerateAppSecret) | **POST** /apps/{id}/regenerateSecret | Regenerate a virtual app secret
+*OASAppsApi* | [**updateApp**](OASAppsApi.md#updateApp) | **PUT** /apps/{id} | Update a virtual app
 *OASCatalogApi* | [**getCatalogTemplates**](OASCatalogApi.md#getCatalogTemplates) | **GET** /catalog/templates | Get all templates from your corporate catalog
 *OASCatalogApi* | [**installTemplateFromStore**](OASCatalogApi.md#installTemplateFromStore) | **POST** /catalog/templates/installFromStore | Install a template from the public template store to your corporate catalog
 *OASJobsApi* | [**createProvisioningJob**](OASJobsApi.md#createProvisioningJob) | **POST** /jobs/provisioning | Create a new provisioning job by sending a ProvisioningRequest
 *OASJobsApi* | [**getJob**](OASJobsApi.md#getJob) | **GET** /jobs/{id} | Get detailed information about a job (Status, logs...)
-*OASPluginsApi* | [**createPlugin**](OASPluginsApi.md#createPlugin) | **POST** /plugins | Create a new plugin
-*OASPluginsApi* | [**deletePlugin**](OASPluginsApi.md#deletePlugin) | **DELETE** /plugins/{id} | Delete a plugin
-*OASPluginsApi* | [**getPlugIns**](OASPluginsApi.md#getPlugIns) | **GET** /plugins | Get all plugins in a tenant
-*OASPluginsApi* | [**regeneratePluginSecret**](OASPluginsApi.md#regeneratePluginSecret) | **POST** /plugins/{id}/regenerateSecret | Regenerate a plugin secret
-*OASPluginsApi* | [**updatePlugin**](OASPluginsApi.md#updatePlugin) | **PUT** /plugins/{id} | Update a plugin
 *OASStoreApi* | [**getStoreCategories**](OASStoreApi.md#getStoreCategories) | **GET** /store/categories | Get all store categories from the public template store
 *OASStoreApi* | [**getStoreTemplate**](OASStoreApi.md#getStoreTemplate) | **GET** /store/templates/{id} | Get a store template
 *OASStoreApi* | [**getStoreTemplates**](OASStoreApi.md#getStoreTemplates) | **GET** /store/templates | Get all templates from the public template store
@@ -78,43 +82,37 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [OASCatalogTemplate](OASCatalogTemplate.md)
- - [OASCatalogTemplateTemplateConfigurat](OASCatalogTemplateTemplateConfigurat.md)
- - [OASInlineObject](OASInlineObject.md)
- - [OASInlineObject1](OASInlineObject1.md)
- - [OASInlineObject2](OASInlineObject2.md)
+ - [OASApp](OASApp.md)
+ - [OASAppTemplateConfiguration](OASAppTemplateConfiguration.md)
  - [OASJob](OASJob.md)
- - [OASPlugin](OASPlugin.md)
- - [OASPluginTemplateConfiguration](OASPluginTemplateConfiguration.md)
  - [OASProvisioningRequest](OASProvisioningRequest.md)
  - [OASProvisioningRequestOnBehalfOfRequ](OASProvisioningRequestOnBehalfOfRequ.md)
  - [OASProvisioningRequestRequestedMembe](OASProvisioningRequestRequestedMembe.md)
  - [OASStoreCategory](OASStoreCategory.md)
  - [OASStoreCategoryLabel](OASStoreCategoryLabel.md)
- - [OASStoreTemplate](OASStoreTemplate.md)
- - [OASStoreTemplateTemplateConfiguratio](OASStoreTemplateTemplateConfiguratio.md)
+ - [OASTemplateIdentifier](OASTemplateIdentifier.md)
 
 
 ## Documentation for Authorization
 
 Authentication schemes defined for the API:
-### bearerAuth
-
-- **Type**: HTTP basic authentication
-
-### pluginId
+### appId
 
 
 - **Type**: API key
 - **API key parameter name**: X-APP-ID
 - **Location**: HTTP header
 
-### pluginSecret
+### appSecret
 
 
 - **Type**: API key
 - **API key parameter name**: X-API-KEY
 - **Location**: HTTP header
+
+### bearerAuth
+
+- **Type**: HTTP basic authentication
 
 
 ## Author

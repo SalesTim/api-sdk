@@ -24,7 +24,7 @@ Contact: support@salestim.com
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Org.OpenAPITools\Org.OpenAPITools.csproj">
-      <Project>{9D8E993D-198A-4811-B817-481E447E2C08}</Project>
+      <Project>{AD652E87-8C14-4BF7-8D35-44D0030134E1}</Project>
       <Name>Org.OpenAPITools</Name>
     </ProjectReference>
   </ItemGroup>

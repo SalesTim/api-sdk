@@ -52,7 +52,7 @@ namespace Org.OpenAPITools.Authentication
             if (context.Resource is AuthorizationFilterContext authorizationFilterContext)
             {
                 var apiKey = authorizationFilterContext.HttpContext.Request.Headers["X-APP-ID"].FirstOrDefault();
-                if (requirement.PolicyName == "pluginId" && apiKey != null && requirement.ApiKeys.Any(requiredApiKey => apiKey == requiredApiKey))
+                if (requirement.PolicyName == "appId" && apiKey != null && requirement.ApiKeys.Any(requiredApiKey => apiKey == requiredApiKey))
                 {
                     context.Succeed(requirement);
                 }
@@ -61,7 +61,7 @@ namespace Org.OpenAPITools.Authentication
             if (context.Resource is AuthorizationFilterContext authorizationFilterContext)
             {
                 var apiKey = authorizationFilterContext.HttpContext.Request.Headers["X-API-KEY"].FirstOrDefault();
-                if (requirement.PolicyName == "pluginSecret" && apiKey != null && requirement.ApiKeys.Any(requiredApiKey => apiKey == requiredApiKey))
+                if (requirement.PolicyName == "appSecret" && apiKey != null && requirement.ApiKeys.Any(requiredApiKey => apiKey == requiredApiKey))
                 {
                     context.Succeed(requirement);
                 }

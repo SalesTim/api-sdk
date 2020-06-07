@@ -45,7 +45,7 @@ public class OASJobsApi {
             new Map<String, Object>(),
             new List<String>{ 'application/json' },
             new List<String>{ 'application/json' },
-            new List<String> { 'pluginId', 'pluginSecret' },
+            new List<String> { 'appId', 'appSecret' },
             OASJob.class
         );
     }
@@ -70,7 +70,7 @@ public class OASJobsApi {
             new Map<String, Object>(),
             new List<String>{ 'application/json' },
             new List<String>(),
-            new List<String> { 'pluginId', 'pluginSecret' },
+            new List<String> { 'appId', 'appSecret' },
             OASJob.class
         );
     }

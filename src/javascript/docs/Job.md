@@ -28,6 +28,8 @@ Name | Type | Description | Notes
 
 * `paused` (value: `"paused"`)
 
+* `unknownFutureValue` (value: `"unknownFutureValue"`)
+
 
 
 

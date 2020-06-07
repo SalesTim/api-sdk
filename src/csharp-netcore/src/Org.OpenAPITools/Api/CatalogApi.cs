@@ -34,8 +34,8 @@ namespace Org.OpenAPITools.Api
         /// Get all templates from your corporate catalog
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;CatalogTemplate&gt;</returns>
-        List<CatalogTemplate> GetCatalogTemplates ();
+        /// <returns>List&lt;Object&gt;</returns>
+        List<Object> GetCatalogTemplates ();
 
         /// <summary>
         /// Get all templates from your corporate catalog
@@ -44,8 +44,8 @@ namespace Org.OpenAPITools.Api
         /// Get all templates from your corporate catalog
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;CatalogTemplate&gt;</returns>
-        ApiResponse<List<CatalogTemplate>> GetCatalogTemplatesWithHttpInfo ();
+        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
+        ApiResponse<List<Object>> GetCatalogTemplatesWithHttpInfo ();
         /// <summary>
         /// Install a template from the public template store to your corporate catalog
         /// </summary>
@@ -53,9 +53,9 @@ namespace Org.OpenAPITools.Api
         /// Install a template from the public template store to your corporate catalog
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject"></param>
-        /// <returns>CatalogTemplate</returns>
-        CatalogTemplate InstallTemplateFromStore (InlineObject inlineObject);
+        /// <param name="templateIdentifier">The template to be installed</param>
+        /// <returns>Object</returns>
+        Object InstallTemplateFromStore (TemplateIdentifier templateIdentifier);
 
         /// <summary>
         /// Install a template from the public template store to your corporate catalog
@@ -64,9 +64,9 @@ namespace Org.OpenAPITools.Api
         /// Install a template from the public template store to your corporate catalog
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject"></param>
-        /// <returns>ApiResponse of CatalogTemplate</returns>
-        ApiResponse<CatalogTemplate> InstallTemplateFromStoreWithHttpInfo (InlineObject inlineObject);
+        /// <param name="templateIdentifier">The template to be installed</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> InstallTemplateFromStoreWithHttpInfo (TemplateIdentifier templateIdentifier);
         #endregion Synchronous Operations
     }
 
@@ -83,8 +83,8 @@ namespace Org.OpenAPITools.Api
         /// Get all templates from your corporate catalog
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;CatalogTemplate&gt;</returns>
-        System.Threading.Tasks.Task<List<CatalogTemplate>> GetCatalogTemplatesAsync ();
+        /// <returns>Task of List&lt;Object&gt;</returns>
+        System.Threading.Tasks.Task<List<Object>> GetCatalogTemplatesAsync ();
 
         /// <summary>
         /// Get all templates from your corporate catalog
@@ -93,8 +93,8 @@ namespace Org.OpenAPITools.Api
         /// Get all templates from your corporate catalog
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;CatalogTemplate&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<CatalogTemplate>>> GetCatalogTemplatesAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<Object>>> GetCatalogTemplatesAsyncWithHttpInfo ();
         /// <summary>
         /// Install a template from the public template store to your corporate catalog
         /// </summary>
@@ -102,9 +102,9 @@ namespace Org.OpenAPITools.Api
         /// Install a template from the public template store to your corporate catalog
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject"></param>
-        /// <returns>Task of CatalogTemplate</returns>
-        System.Threading.Tasks.Task<CatalogTemplate> InstallTemplateFromStoreAsync (InlineObject inlineObject);
+        /// <param name="templateIdentifier">The template to be installed</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> InstallTemplateFromStoreAsync (TemplateIdentifier templateIdentifier);
 
         /// <summary>
         /// Install a template from the public template store to your corporate catalog
@@ -113,9 +113,9 @@ namespace Org.OpenAPITools.Api
         /// Install a template from the public template store to your corporate catalog
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject"></param>
-        /// <returns>Task of ApiResponse (CatalogTemplate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CatalogTemplate>> InstallTemplateFromStoreAsyncWithHttpInfo (InlineObject inlineObject);
+        /// <param name="templateIdentifier">The template to be installed</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> InstallTemplateFromStoreAsyncWithHttpInfo (TemplateIdentifier templateIdentifier);
         #endregion Asynchronous Operations
     }
 
@@ -240,10 +240,10 @@ namespace Org.OpenAPITools.Api
         /// Get all templates from your corporate catalog Get all templates from your corporate catalog
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;CatalogTemplate&gt;</returns>
-        public List<CatalogTemplate> GetCatalogTemplates ()
+        /// <returns>List&lt;Object&gt;</returns>
+        public List<Object> GetCatalogTemplates ()
         {
-             Org.OpenAPITools.Client.ApiResponse<List<CatalogTemplate>> localVarResponse = GetCatalogTemplatesWithHttpInfo();
+             Org.OpenAPITools.Client.ApiResponse<List<Object>> localVarResponse = GetCatalogTemplatesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -251,8 +251,8 @@ namespace Org.OpenAPITools.Api
         /// Get all templates from your corporate catalog Get all templates from your corporate catalog
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;CatalogTemplate&gt;</returns>
-        public Org.OpenAPITools.Client.ApiResponse< List<CatalogTemplate> > GetCatalogTemplatesWithHttpInfo ()
+        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
+        public Org.OpenAPITools.Client.ApiResponse< List<Object> > GetCatalogTemplatesWithHttpInfo ()
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -271,25 +271,25 @@ namespace Org.OpenAPITools.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
+            // authentication (appId) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-APP-ID")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("X-APP-ID", this.Configuration.GetApiKeyWithPrefix("X-APP-ID"));
+            }
+            // authentication (appSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-API-KEY")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("X-API-KEY", this.Configuration.GetApiKeyWithPrefix("X-API-KEY"));
+            }
             // authentication (bearerAuth) required
             // bearer authentication required
             if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
             {
                 localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
             }
-            // authentication (pluginId) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-APP-ID")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("X-APP-ID", this.Configuration.GetApiKeyWithPrefix("X-APP-ID"));
-            }
-            // authentication (pluginSecret) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-API-KEY")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("X-API-KEY", this.Configuration.GetApiKeyWithPrefix("X-API-KEY"));
-            }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get< List<CatalogTemplate> >("/catalog/templates", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get< List<Object> >("/catalog/templates", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -304,10 +304,10 @@ namespace Org.OpenAPITools.Api
         /// Get all templates from your corporate catalog Get all templates from your corporate catalog
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;CatalogTemplate&gt;</returns>
-        public async System.Threading.Tasks.Task<List<CatalogTemplate>> GetCatalogTemplatesAsync ()
+        /// <returns>Task of List&lt;Object&gt;</returns>
+        public async System.Threading.Tasks.Task<List<Object>> GetCatalogTemplatesAsync ()
         {
-             Org.OpenAPITools.Client.ApiResponse<List<CatalogTemplate>> localVarResponse = await GetCatalogTemplatesAsyncWithHttpInfo();
+             Org.OpenAPITools.Client.ApiResponse<List<Object>> localVarResponse = await GetCatalogTemplatesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -316,8 +316,8 @@ namespace Org.OpenAPITools.Api
         /// Get all templates from your corporate catalog Get all templates from your corporate catalog
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;CatalogTemplate&gt;)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<CatalogTemplate>>> GetCatalogTemplatesAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<Object>>> GetCatalogTemplatesAsyncWithHttpInfo ()
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -337,26 +337,26 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
 
+            // authentication (appId) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-APP-ID")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("X-APP-ID", this.Configuration.GetApiKeyWithPrefix("X-APP-ID"));
+            }
+            // authentication (appSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-API-KEY")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("X-API-KEY", this.Configuration.GetApiKeyWithPrefix("X-API-KEY"));
+            }
             // authentication (bearerAuth) required
             // bearer authentication required
             if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
             {
                 localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
             }
-            // authentication (pluginId) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-APP-ID")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("X-APP-ID", this.Configuration.GetApiKeyWithPrefix("X-APP-ID"));
-            }
-            // authentication (pluginSecret) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-API-KEY")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("X-API-KEY", this.Configuration.GetApiKeyWithPrefix("X-API-KEY"));
-            }
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CatalogTemplate>>("/catalog/templates", localVarRequestOptions, this.Configuration);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<Object>>("/catalog/templates", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -371,11 +371,11 @@ namespace Org.OpenAPITools.Api
         /// Install a template from the public template store to your corporate catalog Install a template from the public template store to your corporate catalog
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject"></param>
-        /// <returns>CatalogTemplate</returns>
-        public CatalogTemplate InstallTemplateFromStore (InlineObject inlineObject)
+        /// <param name="templateIdentifier">The template to be installed</param>
+        /// <returns>Object</returns>
+        public Object InstallTemplateFromStore (TemplateIdentifier templateIdentifier)
         {
-             Org.OpenAPITools.Client.ApiResponse<CatalogTemplate> localVarResponse = InstallTemplateFromStoreWithHttpInfo(inlineObject);
+             Org.OpenAPITools.Client.ApiResponse<Object> localVarResponse = InstallTemplateFromStoreWithHttpInfo(templateIdentifier);
              return localVarResponse.Data;
         }
 
@@ -383,13 +383,13 @@ namespace Org.OpenAPITools.Api
         /// Install a template from the public template store to your corporate catalog Install a template from the public template store to your corporate catalog
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject"></param>
-        /// <returns>ApiResponse of CatalogTemplate</returns>
-        public Org.OpenAPITools.Client.ApiResponse< CatalogTemplate > InstallTemplateFromStoreWithHttpInfo (InlineObject inlineObject)
+        /// <param name="templateIdentifier">The template to be installed</param>
+        /// <returns>ApiResponse of Object</returns>
+        public Org.OpenAPITools.Client.ApiResponse< Object > InstallTemplateFromStoreWithHttpInfo (TemplateIdentifier templateIdentifier)
         {
-            // verify the required parameter 'inlineObject' is set
-            if (inlineObject == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'inlineObject' when calling CatalogApi->InstallTemplateFromStore");
+            // verify the required parameter 'templateIdentifier' is set
+            if (templateIdentifier == null)
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'templateIdentifier' when calling CatalogApi->InstallTemplateFromStore");
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -408,7 +408,7 @@ namespace Org.OpenAPITools.Api
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = inlineObject;
+            localVarRequestOptions.Data = templateIdentifier;
 
             // authentication (bearerAuth) required
             // bearer authentication required
@@ -418,7 +418,7 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post< CatalogTemplate >("/catalog/templates/installFromStore", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post< Object >("/catalog/templates/installFromStore", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -433,11 +433,11 @@ namespace Org.OpenAPITools.Api
         /// Install a template from the public template store to your corporate catalog Install a template from the public template store to your corporate catalog
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject"></param>
-        /// <returns>Task of CatalogTemplate</returns>
-        public async System.Threading.Tasks.Task<CatalogTemplate> InstallTemplateFromStoreAsync (InlineObject inlineObject)
+        /// <param name="templateIdentifier">The template to be installed</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> InstallTemplateFromStoreAsync (TemplateIdentifier templateIdentifier)
         {
-             Org.OpenAPITools.Client.ApiResponse<CatalogTemplate> localVarResponse = await InstallTemplateFromStoreAsyncWithHttpInfo(inlineObject);
+             Org.OpenAPITools.Client.ApiResponse<Object> localVarResponse = await InstallTemplateFromStoreAsyncWithHttpInfo(templateIdentifier);
              return localVarResponse.Data;
 
         }
@@ -446,13 +446,13 @@ namespace Org.OpenAPITools.Api
         /// Install a template from the public template store to your corporate catalog Install a template from the public template store to your corporate catalog
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject"></param>
-        /// <returns>Task of ApiResponse (CatalogTemplate)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CatalogTemplate>> InstallTemplateFromStoreAsyncWithHttpInfo (InlineObject inlineObject)
+        /// <param name="templateIdentifier">The template to be installed</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Object>> InstallTemplateFromStoreAsyncWithHttpInfo (TemplateIdentifier templateIdentifier)
         {
-            // verify the required parameter 'inlineObject' is set
-            if (inlineObject == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'inlineObject' when calling CatalogApi->InstallTemplateFromStore");
+            // verify the required parameter 'templateIdentifier' is set
+            if (templateIdentifier == null)
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'templateIdentifier' when calling CatalogApi->InstallTemplateFromStore");
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -472,7 +472,7 @@ namespace Org.OpenAPITools.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            localVarRequestOptions.Data = inlineObject;
+            localVarRequestOptions.Data = templateIdentifier;
 
             // authentication (bearerAuth) required
             // bearer authentication required
@@ -483,7 +483,7 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<CatalogTemplate>("/catalog/templates/installFromStore", localVarRequestOptions, this.Configuration);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/catalog/templates/installFromStore", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {

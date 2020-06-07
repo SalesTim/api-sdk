@@ -13,8 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import CatalogTemplate from '../model/CatalogTemplate';
-import InlineObject from '../model/InlineObject';
+import TemplateIdentifier from '../model/TemplateIdentifier';
 
 /**
 * Catalog service.
@@ -39,7 +38,7 @@ export default class CatalogApi {
      * Callback function to receive the result of the getCatalogTemplates operation.
      * @callback module:api/CatalogApi~getCatalogTemplatesCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CatalogTemplate>} data The data returned by the service call.
+     * @param {Array.<Object>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -47,7 +46,7 @@ export default class CatalogApi {
      * Get all templates from your corporate catalog
      * Get all templates from your corporate catalog
      * @param {module:api/CatalogApi~getCatalogTemplatesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CatalogTemplate>}
+     * data is of type: {@link Array.<Object>}
      */
     getCatalogTemplates(callback) {
       let postBody = null;
@@ -61,10 +60,10 @@ export default class CatalogApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth', 'pluginId', 'pluginSecret'];
+      let authNames = ['appId', 'appSecret', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [CatalogTemplate];
+      let returnType = [Object];
       return this.apiClient.callApi(
         '/catalog/templates', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -76,22 +75,22 @@ export default class CatalogApi {
      * Callback function to receive the result of the installTemplateFromStore operation.
      * @callback module:api/CatalogApi~installTemplateFromStoreCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/CatalogTemplate} data The data returned by the service call.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Install a template from the public template store to your corporate catalog
      * Install a template from the public template store to your corporate catalog
-     * @param {module:model/InlineObject} inlineObject 
+     * @param {module:model/TemplateIdentifier} templateIdentifier The template to be installed
      * @param {module:api/CatalogApi~installTemplateFromStoreCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CatalogTemplate}
+     * data is of type: {@link Object}
      */
-    installTemplateFromStore(inlineObject, callback) {
-      let postBody = inlineObject;
-      // verify the required parameter 'inlineObject' is set
-      if (inlineObject === undefined || inlineObject === null) {
-        throw new Error("Missing the required parameter 'inlineObject' when calling installTemplateFromStore");
+    installTemplateFromStore(templateIdentifier, callback) {
+      let postBody = templateIdentifier;
+      // verify the required parameter 'templateIdentifier' is set
+      if (templateIdentifier === undefined || templateIdentifier === null) {
+        throw new Error("Missing the required parameter 'templateIdentifier' when calling installTemplateFromStore");
       }
 
       let pathParams = {
@@ -106,7 +105,7 @@ export default class CatalogApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = CatalogTemplate;
+      let returnType = Object;
       return this.apiClient.callApi(
         '/catalog/templates/installFromStore', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

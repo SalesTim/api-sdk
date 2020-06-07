@@ -106,18 +106,9 @@ var defaultClient = SalesTimApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 var bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-// Configure API key authorization: pluginId
-var pluginId = defaultClient.authentications['pluginId'];
-pluginId.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//pluginId.apiKeyPrefix['X-APP-ID'] = "Token"
-// Configure API key authorization: pluginSecret
-var pluginSecret = defaultClient.authentications['pluginSecret'];
-pluginSecret.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//pluginSecret.apiKeyPrefix['X-API-KEY'] = "Token"
 
-var api = new SalesTimApi.CatalogApi()
+var api = new SalesTimApi.AppsApi()
+var app = new SalesTimApi.App(); // {App} List of properties to be updated.
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -125,7 +116,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getCatalogTemplates(callback);
+api.createApp(app, callback);
 
 ```
 
@@ -135,15 +126,15 @@ All URIs are relative to *https://api.salestim.io/v1.0*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*SalesTimApi.AppsApi* | [**createApp**](docs/AppsApi.md#createApp) | **POST** /apps | Create a virtual app
+*SalesTimApi.AppsApi* | [**deleteApp**](docs/AppsApi.md#deleteApp) | **DELETE** /apps/{id} | Delete a virtual app
+*SalesTimApi.AppsApi* | [**getApps**](docs/AppsApi.md#getApps) | **GET** /apps | Get all virtual apps in a tenant
+*SalesTimApi.AppsApi* | [**regenerateAppSecret**](docs/AppsApi.md#regenerateAppSecret) | **POST** /apps/{id}/regenerateSecret | Regenerate a virtual app secret
+*SalesTimApi.AppsApi* | [**updateApp**](docs/AppsApi.md#updateApp) | **PUT** /apps/{id} | Update a virtual app
 *SalesTimApi.CatalogApi* | [**getCatalogTemplates**](docs/CatalogApi.md#getCatalogTemplates) | **GET** /catalog/templates | Get all templates from your corporate catalog
 *SalesTimApi.CatalogApi* | [**installTemplateFromStore**](docs/CatalogApi.md#installTemplateFromStore) | **POST** /catalog/templates/installFromStore | Install a template from the public template store to your corporate catalog
 *SalesTimApi.JobsApi* | [**createProvisioningJob**](docs/JobsApi.md#createProvisioningJob) | **POST** /jobs/provisioning | Create a new provisioning job by sending a ProvisioningRequest
 *SalesTimApi.JobsApi* | [**getJob**](docs/JobsApi.md#getJob) | **GET** /jobs/{id} | Get detailed information about a job (Status, logs...)
-*SalesTimApi.PluginsApi* | [**createPlugin**](docs/PluginsApi.md#createPlugin) | **POST** /plugins | Create a new plugin
-*SalesTimApi.PluginsApi* | [**deletePlugin**](docs/PluginsApi.md#deletePlugin) | **DELETE** /plugins/{id} | Delete a plugin
-*SalesTimApi.PluginsApi* | [**getPlugIns**](docs/PluginsApi.md#getPlugIns) | **GET** /plugins | Get all plugins in a tenant
-*SalesTimApi.PluginsApi* | [**regeneratePluginSecret**](docs/PluginsApi.md#regeneratePluginSecret) | **POST** /plugins/{id}/regenerateSecret | Regenerate a plugin secret
-*SalesTimApi.PluginsApi* | [**updatePlugin**](docs/PluginsApi.md#updatePlugin) | **PUT** /plugins/{id} | Update a plugin
 *SalesTimApi.StoreApi* | [**getStoreCategories**](docs/StoreApi.md#getStoreCategories) | **GET** /store/categories | Get all store categories from the public template store
 *SalesTimApi.StoreApi* | [**getStoreTemplate**](docs/StoreApi.md#getStoreTemplate) | **GET** /store/templates/{id} | Get a store template
 *SalesTimApi.StoreApi* | [**getStoreTemplates**](docs/StoreApi.md#getStoreTemplates) | **GET** /store/templates | Get all templates from the public template store
@@ -152,34 +143,22 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SalesTimApi.CatalogTemplate](docs/CatalogTemplate.md)
- - [SalesTimApi.CatalogTemplateTemplateConfiguration](docs/CatalogTemplateTemplateConfiguration.md)
- - [SalesTimApi.InlineObject](docs/InlineObject.md)
- - [SalesTimApi.InlineObject1](docs/InlineObject1.md)
- - [SalesTimApi.InlineObject2](docs/InlineObject2.md)
+ - [SalesTimApi.App](docs/App.md)
+ - [SalesTimApi.AppTemplateConfiguration](docs/AppTemplateConfiguration.md)
  - [SalesTimApi.Job](docs/Job.md)
- - [SalesTimApi.Plugin](docs/Plugin.md)
- - [SalesTimApi.PluginTemplateConfiguration](docs/PluginTemplateConfiguration.md)
  - [SalesTimApi.ProvisioningRequest](docs/ProvisioningRequest.md)
  - [SalesTimApi.ProvisioningRequestOnBehalfOfRequester](docs/ProvisioningRequestOnBehalfOfRequester.md)
  - [SalesTimApi.ProvisioningRequestRequestedMembers](docs/ProvisioningRequestRequestedMembers.md)
  - [SalesTimApi.StoreCategory](docs/StoreCategory.md)
  - [SalesTimApi.StoreCategoryLabel](docs/StoreCategoryLabel.md)
- - [SalesTimApi.StoreTemplate](docs/StoreTemplate.md)
- - [SalesTimApi.StoreTemplateTemplateConfiguration](docs/StoreTemplateTemplateConfiguration.md)
+ - [SalesTimApi.TemplateIdentifier](docs/TemplateIdentifier.md)
 
 
 ## Documentation for Authorization
 
 
 
-### bearerAuth
-
-- **Type**: Bearer authentication (JWT)
-
-
-
-### pluginId
+### appId
 
 
 - **Type**: API key
@@ -188,10 +167,16 @@ Class | Method | HTTP request | Description
 
 
 
-### pluginSecret
+### appSecret
 
 
 - **Type**: API key
 - **API key parameter name**: X-API-KEY
 - **Location**: HTTP header
+
+
+
+### bearerAuth
+
+- **Type**: Bearer authentication (JWT)
 
