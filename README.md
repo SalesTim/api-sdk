@@ -38,12 +38,12 @@ As of today, here is the current status for each language / platform:
 
 | Language / Platform | Directory | Description | Status |
 |:--------------------|:----------|:------------|:--------|
-| **Node & JavaScript** | [./javascript/](./javascript/) | JavaScript module for the SalesTim API service. This library works both on the server with `Node.js` and in the browser environment with `JavaScript`. | 🥈 Beta |
-| **PowerShell** | [./powershell/](./powershell/) | PowerShell module for the SalesTim API service. Cmdlets should work in any environment supported by `PowerShell Core`. | 🥉 Alpha |
-| **Salesforce Apex** | [./apex/](./apex/) | Salesforce sample Force App for the SalesTim API service. Relies on the `sfdx` module. | 🧪 Experimental |
-| **AspDotNet Core** | [./aspnetcore/](./aspnetcore/) | `Asp.Net` server sample project. This sample should work in any environment supported by `.NET Core`. | 🧪 Experimental |
-| **C# > .NET Core** | [./csharp-netcore/](./csharp-netcore/) | C# client library for the SalesTim API service. This library supports `.NET Core`, `.NET Framework` and `Mono/Xamarin` environments. | 🧪 Experimental |
-| **Node + Express** | [./nodejs-express-server/](./nodejs-express-server/) | `Node.js` server sample project with `Express` built-in. This sample should work in any environment supported by `Node.js`. | 🧪 Experimental |
+| **Node & JavaScript** | [https://github.com/SalesTim/api-sdk/tree/master/src/javascript/](./javascript/) | JavaScript module for the SalesTim API service. This library works both on the server with `Node.js` and in the browser environment with `JavaScript`. | 🥈 Beta |
+| **PowerShell** | [https://github.com/SalesTim/api-sdk/tree/master/src/powershell/](./powershell/) | PowerShell module for the SalesTim API service. Cmdlets should work in any environment supported by `PowerShell Core`. | 🥉 Alpha |
+| **Salesforce Apex** | [https://github.com/SalesTim/api-sdk/tree/master/src/apex/](./apex/) | Salesforce sample Force App for the SalesTim API service. Relies on the `sfdx` module. | 🧪 Experimental |
+| **AspDotNet Core** | [https://github.com/SalesTim/api-sdk/tree/master/src/aspnetcore/](./aspnetcore/) | `Asp.Net` server sample project. This sample should work in any environment supported by `.NET Core`. | 🧪 Experimental |
+| **C# > .NET Core** | [https://github.com/SalesTim/api-sdk/tree/master/src/csharp-netcore/](./csharp-netcore/) | C# client library for the SalesTim API service. This library supports `.NET Core`, `.NET Framework` and `Mono/Xamarin` environments. | 🧪 Experimental |
+| **Node + Express** | [https://github.com/SalesTim/api-sdk/tree/master/src/nodejs-express-server/](./nodejs-express-server/) | `Node.js` server sample project with `Express` built-in. This sample should work in any environment supported by `Node.js`. | 🧪 Experimental |
 
 Legend:
 - 🥇 GA > Generally Available, suitable for production use.
@@ -52,7 +52,7 @@ Legend:
 - 🧪 Experimental > Investigated as interest in this platform has been demonstrated.
 
 > Don't see your favorite programming language here? Wanna see a `Ruby`, `Go` or `Java` SDK?  
-Just [Create a New Issue!](/issues)
+Just [Create a New Issue!](https://github.com/SalesTim/api-sdk/issues)
 
 ### Technologies
 The source code generation process () relies on two different code generators:
@@ -135,18 +135,18 @@ npm run gen-nodejs-express-server
 ```
 
 Once generated, please refer to each `README` file for further reference:
-- `javascript`: [README](.src/javascript/README.md)
-- `powershell`: [README](./src/powershell/README.md)
-- `apex`: [README](./src/apex/README.md)
-- `csharp-netcore`: [README](./src/csharp-netcore/README.md)
-- `aspnetcore`: [README](./src/aspnetcore/README.md)
-- `nodejs-express-server`: [README](.src/nodejs-express-server/README.md)
+- `javascript`: [README](https://github.com/SalesTim/api-sdk/tree/master/src/javascript/README.md)
+- `powershell`: [README](https://github.com/SalesTim/api-sdk/tree/master/src/powershell/README.md)
+- `apex`: [README](https://github.com/SalesTim/api-sdk/tree/master/src/apex/README.md)
+- `csharp-netcore`: [README](https://github.com/SalesTim/api-sdk/tree/master/src/csharp-netcore/README.md)
+- `aspnetcore`: [README](https://github.com/SalesTim/api-sdk/tree/master/src/aspnetcore/README.md)
+- `nodejs-express-server`: [README](https://github.com/SalesTim/api-sdk/tree/master/src/nodejs-express-server/README.md)
 
 ## X. APPENDICES
 
 ### COMMUNICATING WITH THE TEAM
 
-The easiest way to communicate with the team is via [GitHub Issues](/issues).
+The easiest way to communicate with the team is via [GitHub Issues](https://github.com/SalesTim/api-sdk/issues).
 
 Please file new issues, feature requests and suggestions, but **DO search for similar open/closed pre-existing issues before creating a new issue.**
 
